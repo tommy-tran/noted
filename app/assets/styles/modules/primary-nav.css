@@ -1,0 +1,22 @@
+.primary-nav {
+    text-align: center;
+    transition: all 1.5s ease-in-out;
+    ul {
+        margin: 0 0;
+        padding: 0 0;
+    }
+
+    li {
+        display: inline;
+        list-style: none;
+        padding: 10px 0;
+    }
+
+    a {
+        transition: all 0.2s linear;
+        color: black;
+        text-decoration: none;
+        font-weight: 800;
+        padding: 10px 5%;
+    }
+}
