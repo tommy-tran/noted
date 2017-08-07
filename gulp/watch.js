@@ -1,13 +1,20 @@
-var gulp = require('gulp');
-var watch = require('gulp-watch');
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const watch = require('gulp-watch');
+const browserSync = require('browser-sync');
+const connect  = require('gulp-connect-php');
 
-gulp.task('watch', function() {
-    browserSync.init({
-        notify: false,
-        server: {
-            baseDir: "app"
-        }
+
+gulp.task('connect', function(callback) {
+    connect.server({
+        base: 'app',
+        port: 8001
+    }, callback);
+});
+
+gulp.task('watch', ['connect'], function() {
+    browserSync({
+        proxy: '127.0.0.1:8001',
+        port: 8910
     });
 
     watch('./app/index.php', function() {

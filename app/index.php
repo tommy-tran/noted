@@ -9,6 +9,11 @@
     <script src="/temp/scripts/Vendor.js"></script>
   </head>
   <body>
+    <nav>
+      <div class="header">
+        Notepad
+      </div>
+    </nav>
     <h1>Hello, world!</h1>
 
     <script src="/temp/scripts/App.js"></script>
