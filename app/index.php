@@ -13,7 +13,6 @@
   <body>
 
   <header class="header">
-    <div class="header-container">
       <span>Header</span>
       <nav class="primary-nav">
         <ul>
@@ -28,7 +27,6 @@
       <div class="header__menu-icon">
         <div class="header__menu-icon__middle"></div>
       </div>
-    </div>
   </header>
     <h1>Hello, world!</h1>
 
