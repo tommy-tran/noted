@@ -11,28 +11,32 @@
     
   </head>
   <body>
+    <header class="header">
+        <span>Noted</span>
+        <div class="header__menu-content">
+          <div class="header__btn-container"></div>
+          <nav class="primary-nav">
+            <ul>
+            <!--Links-->
+              <a href="#"><li class="link">Home</li></a>
+              <a href="#"><li class="link">Help</li></a>
+              <a href="#"><li class="link">Contact</li></a>
+            <!--Icon-->
+            </ul>
+          </nav>
+        </div>
 
-  <header class="header">
-      <span>Header</span>
-      <div class="header__menu-content">
-        <div class="header__btn-container"></div>
-        <nav class="primary-nav">
-          <ul>
-          <!--Links-->
-            <a href="#"><li class="link">Home</li></a>
-            <a href="#"><li class="link">Help</li></a>
-            <a href="#"><li class="link">Contact</li></a>
-          <!--Icon-->
-          </ul>
-        </nav>
-      </div>
-
-      <div class="header-login">Login</div>
-      <div class="header__menu-icon">
-        <div class="header__menu-icon__middle"></div>
-      </div>
-  </header>
-    <h1>Hello, world!</h1>
+        <div class="header-login">Login</div>
+        <div class="header__menu-icon">
+          <div class="header__menu-icon__middle"></div>
+        </div>
+    </header>
+    
+    <div class="jumbotron">
+      <h1>Noted</h1>
+      <p>Free, safe and easy to use online notes!</p>
+      <button>Sign up for free!</button>
+    </div>
 
     <script src="/temp/scripts/App.js"></script>
   </body>
