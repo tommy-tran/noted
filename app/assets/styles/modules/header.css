@@ -1,11 +1,12 @@
 .header {
     color: black;
-    background-color: #eaeaea;
+    background-color: white;
     padding: 1em 0;
     width: 100%;
     position: fixed;
     font-size: 1.2em;
     font-weight: 800;
+    border-bottom: solid gray 1px;
 
     span {
         margin-left: 1em;
@@ -18,6 +19,51 @@
         float: right;
         margin: 0.5em 3em;
         font-weight: 800;
+
+        @mixin Large {
+            display: block;
+        }
+    }
+
+    &__menu-content {
+        display: none;
+
+        &--visible {
+            display: block;
+
+            ul {
+                top: 101%;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                right: 0;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    background-color: white;
+                    height: 5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+
+                    &.hovered {
+                        background-color: #f2f2f2;
+                    }
+                    
+                    a {
+                        margin: 0 0;
+                        padding: 0 0;
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: solid gray 1px;
+                }
+            }
+        }
 
         @mixin Large {
             display: block;

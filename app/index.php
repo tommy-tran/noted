@@ -14,15 +14,18 @@
 
   <header class="header">
       <span>Header</span>
-      <nav class="primary-nav">
-        <ul>
-        <!--Links-->
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Help</a></li>
-          <li><a href="#">Contact</a></li>
-        <!--Icon-->
-        </ul>
-      </nav>
+      <div class="header__menu-content">
+        <div class="header__btn-container"></div>
+        <nav class="primary-nav">
+          <ul>
+          <!--Links-->
+            <a href="#"><li class="link">Home</li></a>
+            <a href="#"><li class="link">Help</li></a>
+            <a href="#"><li class="link">Contact</li></a>
+          <!--Icon-->
+          </ul>
+        </nav>
+      </div>
 
       <div class="header-login">Login</div>
       <div class="header__menu-icon">
