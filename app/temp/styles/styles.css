@@ -6,7 +6,7 @@ header {
 }
 
 html {
-    height: 95%;
+    height: 93%;
 }
 
 body {
@@ -63,6 +63,8 @@ body {
     font-size: 1.2em;
     font-weight: 800;
     border-bottom: solid gray 1px;
+    -webkit-transition: all 1.5s ease-out;
+    transition: all 1.5s ease-out;
     
 }
 
@@ -87,15 +89,18 @@ body {
     }
 
 .header__menu-content {
-        display: none;
+        display: block;
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
     }
 
 .header__menu-content--visible {
-            display: block;
+            opacity: 1;
         }
 
 .header__menu-content--visible ul {
-                top: 101%;
+                top: 102%;
                 position: absolute;
                 width: 100%;
                 left: 0;
@@ -142,7 +147,8 @@ body {
 @media (min-width: 960px) {
 
 .header__menu-content {
-            display: block
+            display: block;
+            opacity: 1
     }
     }
 
@@ -161,6 +167,22 @@ body {
             display: none
     }
     }
+
+.header__menu-icon--close::before {
+                -webkit-transform: rotate(35deg) scaleX(1.24);
+                        transform: rotate(35deg) scaleX(1.24);
+            }
+
+.header__menu-icon--close .header__menu-icon__middle {
+                opacity: 0;
+                -webkit-transform: scaleX(0);
+                        transform: scaleX(0);
+            }
+
+.header__menu-icon--close::after {
+                -webkit-transform: rotate(-35deg) scaleX(1.24);
+                        transform: rotate(-35deg) scaleX(1.24);
+            }
 
 .header__menu-icon::before {
             content: "";
@@ -185,8 +207,8 @@ body {
             width: 2em;
             height: 0.1em;
             background-color: black;
-            -webkit-transition: all .3s ease-out;
-            transition: all .3s ease-out;
+            -webkit-transition: all .32s ease-out;
+            transition: all .32s ease-out;
             -webkit-transform-origin: 0 50%;
                     transform-origin: 0 50%;
         }
@@ -208,6 +230,7 @@ body {
         }
 
 .jumbotron {
+    margin-top: 1.5em;
     height: 90%;
     display: -webkit-box;
     display: -ms-flexbox;

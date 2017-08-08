@@ -7,6 +7,7 @@
     font-size: 1.2em;
     font-weight: 800;
     border-bottom: solid gray 1px;
+    transition: all 1.5s ease-out;
 
     span {
         margin-left: 1em;
@@ -26,13 +27,15 @@
     }
 
     &__menu-content {
-        display: none;
+        display: block;
+        opacity: 0;
+        transition: all 0.3s ease-out;
 
         &--visible {
-            display: block;
+            opacity: 1;
 
             ul {
-                top: 101%;
+                top: 102%;
                 position: absolute;
                 width: 100%;
                 left: 0;
@@ -67,6 +70,7 @@
 
         @mixin Large {
             display: block;
+            opacity: 1;
         }
     }
 
@@ -80,6 +84,21 @@
         top: 1.4em;
         right: 2em;
         z-index: 10;
+
+        &--close {
+            &::before {
+                transform: rotate(35deg) scaleX(1.24);
+            }
+
+            .header__menu-icon__middle {
+                opacity: 0;
+                transform: scaleX(0);
+            }
+
+            &::after {
+                transform: rotate(-35deg) scaleX(1.24);
+            }
+        }
 
         &::before {
             content: "";
@@ -100,7 +119,7 @@
             width: 2em;
             height: 0.1em;
             background-color: black;
-            transition: all .3s ease-out;
+            transition: all .32s ease-out;
             transform-origin: 0 50%;
         }
 

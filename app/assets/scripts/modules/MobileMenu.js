@@ -14,11 +14,15 @@ class MobileMenu {
     }
 
     toggleMenu() {
-        this.menuContent.toggleClass("header__menu-content--visible");
+        if ($(".header__menu-content--visible")[0]) {
+            this.menuContent.removeClass("header__menu-content--visible");
+        } else {
+            this.menuContent.addClass("header__menu-content--visible");
+        }
+        this.menuIcon.toggleClass("header__menu-icon--close");
     }
 
     highlightItem() {
-        console.log(this);
         $(this).addClass("hovered");
     }
     unhighlightItem() {

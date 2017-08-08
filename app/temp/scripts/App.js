@@ -118,12 +118,16 @@ var MobileMenu = function () {
     }, {
         key: 'toggleMenu',
         value: function toggleMenu() {
-            this.menuContent.toggleClass("header__menu-content--visible");
+            if ((0, _jquery2.default)(".header__menu-content--visible")[0]) {
+                this.menuContent.removeClass("header__menu-content--visible");
+            } else {
+                this.menuContent.addClass("header__menu-content--visible");
+            }
+            this.menuIcon.toggleClass("header__menu-icon--close");
         }
     }, {
         key: 'highlightItem',
         value: function highlightItem() {
-            console.log(this);
             (0, _jquery2.default)(this).addClass("hovered");
         }
     }, {
