@@ -22,8 +22,6 @@ body {
     width: 100%;
     height: 100%;
     text-align: center;
-    -webkit-transition: all 1.5s ease-in-out;
-    transition: all 1.5s ease-in-out;
 }
 
 .primary-nav ul {
@@ -63,10 +61,12 @@ body {
     font-size: 1.2em;
     font-weight: 800;
     border-bottom: solid gray 1px;
-    -webkit-transition: all 1.5s ease-out;
-    transition: all 1.5s ease-out;
     
 }
+
+.header-link--hidden {
+            opacity: 0;
+        }
 
 .header span {
         margin-left: 1em;
@@ -89,13 +89,14 @@ body {
     }
 
 .header__menu-content {
-        display: block;
+        display: none;
         opacity: 0;
         -webkit-transition: all 0.3s ease-out;
         transition: all 0.3s ease-out;
     }
 
 .header__menu-content--visible {
+            display: block;
             opacity: 1;
         }
 
@@ -139,10 +140,6 @@ body {
                         margin: 0 0;
                         padding: 0 0;
                     }
-
-.header__menu-content--visible ul:last-child {
-                    border-bottom: solid gray 1px;
-                }
 
 @media (min-width: 960px) {
 

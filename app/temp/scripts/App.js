@@ -105,7 +105,7 @@ var MobileMenu = function () {
 
         this.menuIcon = (0, _jquery2.default)('.header__menu-icon');
         this.menuContent = (0, _jquery2.default)(".header__menu-content");
-        this.menuLinks = (0, _jquery2.default)(".link");
+        this.menuLinks = (0, _jquery2.default)(".header-link");
         this.events();
     }
 
@@ -118,12 +118,30 @@ var MobileMenu = function () {
     }, {
         key: 'toggleMenu',
         value: function toggleMenu() {
+            var that = this;
             if ((0, _jquery2.default)(".header__menu-content--visible")[0]) {
                 this.menuContent.removeClass("header__menu-content--visible");
             } else {
                 this.menuContent.addClass("header__menu-content--visible");
+                this.menuLinks.each(function (element) {
+                    that.animateIn(this, element);
+                });
+                this.left = !this.left;
             }
             this.menuIcon.toggleClass("header__menu-icon--close");
+        }
+    }, {
+        key: 'animateIn',
+        value: function animateIn(e, interval) {
+            (0, _jquery2.default)(e).addClass("header-link--hidden");
+            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+            setTimeout(function () {
+                (0, _jquery2.default)(e).addClass("animated fadeInDown").one(animationEnd, function () {
+                    (0, _jquery2.default)(e).removeClass('animated fadeInDown');
+                    (0, _jquery2.default)(e).removeClass("header-link--hidden");
+                });
+            }, interval * 80);
         }
     }, {
         key: 'highlightItem',

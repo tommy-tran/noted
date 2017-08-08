@@ -19,9 +19,9 @@
           <nav class="primary-nav">
             <ul>
             <!--Links-->
-              <a href="#"><li class="link">Home</li></a>
-              <a href="#"><li class="link">Help</li></a>
-              <a href="#"><li class="link">Contact</li></a>
+              <a href="#"><li class="header-link">Home</li></a>
+              <a href="#"><li class="header-link">Help</li></a>
+              <a href="#"><li class="header-link">Contact</li></a>
             <!--Icon-->
             </ul>
           </nav>
