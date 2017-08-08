@@ -46,11 +46,11 @@ body {
         font-size: 1.5em;
     }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
 
 .primary-nav a {
             font-size: 1em;
-            margin: 1em 10%
+            margin: 0 8%
     }
     }
 
@@ -79,7 +79,7 @@ body {
         font-weight: 800;
     }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
 
 .header-login {
             display: block
@@ -139,7 +139,7 @@ body {
                     border-bottom: solid gray 1px;
                 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
 
 .header__menu-content {
             display: block
@@ -155,7 +155,7 @@ body {
         z-index: 10;
     }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
 
 .header__menu-icon {
             display: none
