@@ -1,0 +1,13 @@
+@define-mixin Large {
+    @media (min-width: 960px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin clearFix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}

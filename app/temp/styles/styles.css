@@ -1,0 +1,208 @@
+header {
+    position:absolute;
+    left:0%;
+    top:0%;
+    width:100%;
+}
+
+html {
+    height: 95%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: url("../../assets/images/oli-dale-139169.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100%;
+}
+
+.primary-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    -webkit-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+}
+
+.primary-nav ul {
+        margin: 1.5em 0;
+        padding: 0 0;
+    }
+
+.primary-nav li {
+        display: inline;
+        list-style: none;
+    }
+
+.primary-nav a {
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+        color: black;
+        text-decoration: none;
+        font-weight: 800;
+        margin: 0 0;
+        font-size: 1.5em;
+    }
+
+@media (min-width: 960px) {
+
+.primary-nav a {
+            font-size: 1em;
+            margin: 0 8%
+    }
+    }
+
+.header {
+    color: black;
+    background-color: white;
+    padding: 1em 0;
+    width: 100%;
+    position: fixed;
+    font-size: 1.2em;
+    font-weight: 800;
+    border-bottom: solid gray 1px;
+    
+}
+
+.header span {
+        margin-left: 1em;
+        font-size: 2em;
+        float: left;
+    }
+
+.header-login {
+        display: none;
+        float: right;
+        margin: 0.5em 3em;
+        font-weight: 800;
+    }
+
+@media (min-width: 960px) {
+
+.header-login {
+            display: block
+    }
+    }
+
+.header__menu-content {
+        display: none;
+    }
+
+.header__menu-content--visible {
+            display: block;
+        }
+
+.header__menu-content--visible ul {
+                top: 101%;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                right: 0;
+                margin: auto;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+            }
+
+.header__menu-content--visible ul li {
+                    background-color: white;
+                    height: 5rem;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                            flex-direction: column;
+                    -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                            justify-content: center;
+                    text-align: center;
+                }
+
+.header__menu-content--visible ul li.hovered {
+                        background-color: #f2f2f2;
+                    }
+
+.header__menu-content--visible ul li a {
+                        margin: 0 0;
+                        padding: 0 0;
+                    }
+
+.header__menu-content--visible ul:last-child {
+                    border-bottom: solid gray 1px;
+                }
+
+@media (min-width: 960px) {
+
+.header__menu-content {
+            display: block
+    }
+    }
+
+.header__menu-icon {
+        width: 2em;
+        height: 1.5em;
+        position: absolute;
+        top: 1.4em;
+        right: 2em;
+        z-index: 10;
+    }
+
+@media (min-width: 960px) {
+
+.header__menu-icon {
+            display: none
+    }
+    }
+
+.header__menu-icon::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2em;
+            height: 0.1em;
+            background-color: black;
+            -webkit-transform-origin: 0 0;
+                    transform-origin: 0 0;
+            -webkit-transition: -webkit-transform .3s ease-out;
+            transition: -webkit-transform .3s ease-out;
+            transition: transform .3s ease-out;
+            transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+        }
+
+.header__menu-icon__middle {
+            position: absolute;
+            top: 0.7em;
+            left: 0;
+            width: 2em;
+            height: 0.1em;
+            background-color: black;
+            -webkit-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+            -webkit-transform-origin: 0 50%;
+                    transform-origin: 0 50%;
+        }
+
+.header__menu-icon::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 2em;
+            height: 0.1em;
+            background-color: black;
+            -webkit-transform-origin: 0 100%;
+                    transform-origin: 0 100%;
+            -webkit-transition: -webkit-transform .3s ease-out;
+            transition: -webkit-transform .3s ease-out;
+            transition: transform .3s ease-out;
+            transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+        }
