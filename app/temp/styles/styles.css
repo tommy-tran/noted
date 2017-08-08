@@ -44,6 +44,7 @@ body {
     padding: 1em 1em;
     width: 100%;
     position: fixed;
+    font-size: 1.2em;
     
 }
 
@@ -53,10 +54,10 @@ body {
     }
 
 .header__menu-icon {
-        width: 20px;
-        height: 19px;
+        width: 2em;
+        height: 1.5em;
         position: absolute;
-        top: 1.5em;
+        top: 1.2em;
         right: 4em;
         z-index: 10;
     }
@@ -66,8 +67,8 @@ body {
             position: absolute;
             top: 0;
             left: 0;
-            width: 20px;
-            height: 2.5px;
+            width: 2em;
+            height: 0.1em;
             background-color: white;
             -webkit-transform-origin: 0 0;
                     transform-origin: 0 0;
@@ -79,10 +80,10 @@ body {
 
 .header__menu-icon__middle {
             position: absolute;
-            top: 8px;
+            top: 0.7em;
             left: 0;
-            width: 20px;
-            height: 3px;
+            width: 2em;
+            height: 0.1em;
             background-color: white;
             -webkit-transition: all .3s ease-out;
             transition: all .3s ease-out;
@@ -93,10 +94,10 @@ body {
 .header__menu-icon::after {
             content: "";
             position: absolute;
-            bottom: 0px;
+            bottom: 0;
             left: 0;
-            width: 20px;
-            height: 3px;
+            width: 2em;
+            height: 0.1em;
             background-color: white;
             -webkit-transform-origin: 0 100%;
                     transform-origin: 0 100%;

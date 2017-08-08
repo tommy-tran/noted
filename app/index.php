@@ -17,9 +17,9 @@
       <nav class="primary-nav">
         <ul>
         <!--Links-->
-          <li><a href="#">LINK1</a></li>
-          <li><a href="#">LINK2</a></li>
-          <li><a href="#">LINK3</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Contact</a></li>
         <!--Icon-->
         </ul>
       </nav>
