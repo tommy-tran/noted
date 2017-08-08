@@ -5,13 +5,13 @@ header {
     width:100%;
 }
 
-html {
-    height: 93%;
+body, html {
+    height: 100%;
+    background: url("../../assets/images/oli-dale-139169.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
 }
 
-body {
-    font-family: 'Raleway', sans-serif;
-    background: url("../../assets/images/oli-dale-139169.jpg") no-repeat center center;
-    background-size: cover;
-    height: 100%;
-}

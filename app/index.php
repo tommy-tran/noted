@@ -39,6 +39,10 @@
       <button>Sign up for free!</button>
     </div>
 
+    <div class="footer">
+      <p>Created by Tommy Tran</p>
+    </div>
+
     <script src="/temp/scripts/App.js"></script>
   </body>
 </html>
