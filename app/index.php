@@ -27,16 +27,42 @@
           </nav>
         </div>
 
-        <div class="header-login">Login</div>
+        <div class="header-login login-btn">Login</div>
         <div class="header__menu-icon">
           <div class="header__menu-icon__middle"></div>
         </div>
     </header>
+
+    <div class="modal-container modal-container--hidden">
+      <form class="modal modal-signup modal-signup--hidden">
+        <div class="modal__close">X</div>
+        <div class="modal__header">CREATE A NEW ACCOUNT</div>
+        <div class="modal__content">
+          <div id="message"></div>
+          <input type="text" id="username" placeholder="Username">
+          <input type="email" id="placeholder" placeholder="Email Address">
+          <input type="password" id="password" placeholder="Choose a password">
+          <input type="password" id="confirmpassword" placeholder="Confirm password">
+          <input class="button" type="submit">
+        </div>
+      </form>
+
+      <form class="modal modal-login modal-login--hidden">
+        <div class="modal__close">X</div>
+        <div class="modal__header">Log in</div>
+        <div class="modal__content">
+          <div id="message"></div>
+          <input type="text" id="username" placeholder="Username">
+          <input type="password" id="password" placeholder="Password">
+          <input class="button" type="submit">
+        </div>
+      </form>
+    </div>
     
     <div class="jumbotron">
       <h1>Noted</h1>
       <p>Free, safe and easy to use online notes!</p>
-      <button>Sign up for free!</button>
+      <button class="signup-btn">Sign up for free!</button>
     </div>
 
     <div class="footer">
