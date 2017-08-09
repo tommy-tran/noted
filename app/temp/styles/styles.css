@@ -270,7 +270,7 @@ body, html {
 .modal {
     position: absolute;
     height: 400px;
-    width: 760px;
+    width: 720px;
     margin: auto auto;
     background-color: #89b56e;
     color: black;
@@ -281,19 +281,7 @@ body, html {
     left: 0;
     right: 0;
     z-index: 10;
-    border-radius: 60px;
-
-    /* @mixin Large {
-        position: absolute;
-        height: 860px;
-        width: 640px;
-        margin: auto auto;
-        background-color: #89b56e;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    } */
+    border-radius: 50px;
 }
 
 .modal__header {
@@ -316,15 +304,33 @@ body, html {
     }
 
 .modal__content input {
-            height: 2em;
+            height: 2.2em;
             width: 500px;
             border-radius: 10px;
             margin: 5px auto;
+            padding-left: 10px;
+            outline: 0;
         }
 
 .modal__content .button {
-            margin: 20px 15px;
+            margin: 20px auto;
             width: 200px;
             height: 50px;
             border-radius: 30px;
+            padding-left: 0;
+            background-color: #efefef;
+        }
+
+.modal__close {
+        position: absolute;
+        right: 32px;
+        top: 24px;
+        -webkit-transform: scaleX(1.25);
+                transform: scaleX(1.25);
+        color: black;
+    }
+
+.modal__close:hover {
+            color: white;
+            cursor: default;
         }

@@ -34,16 +34,14 @@
     </header>
 
     <form class="modal">
+      <div class="modal__close">X</div>
       <div class="modal__header">CREATE A NEW ACCOUNT</div>
       <div class="modal__content">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <div>
-          <input class="button" type="submit">
-          <button class="button">Cancel</button>
-        </div>
+        <input type="text" id="username" placeholder="Username">
+        <input type="email" id="placeholder" placeholder="Email Address">
+        <input type="password" id="password" placeholder="Choose a password">
+        <input type="password" id="confirmpassword" placeholder="Confirm password">
+        <input class="button" type="submit">
         
       </div>
     </form>

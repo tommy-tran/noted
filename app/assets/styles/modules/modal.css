@@ -1,0 +1,59 @@
+.modal {
+    position: absolute;
+    height: 400px;
+    width: 720px;
+    margin: auto auto;
+    background-color: #89b56e;
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    border-radius: 50px;
+
+    &__header {
+        margin-top: 45px;
+        margin-bottom: 25px;
+        font-size: 2em;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        input {
+            height: 2.2em;
+            width: 500px;
+            border-radius: 10px;
+            margin: 5px auto;
+            padding-left: 10px;
+            outline: 0;
+        }
+
+        .button {
+            margin: 20px auto;
+            width: 200px;
+            height: 50px;
+            border-radius: 30px;
+            padding-left: 0;
+            background-color: #efefef;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: 32px;
+        top: 24px;
+        transform: scaleX(1.25);
+        color: black;
+
+        &:hover {
+            color: white;
+            cursor: default;
+        }
+    }
+}
