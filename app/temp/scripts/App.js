@@ -10450,8 +10450,10 @@ var Modal = function () {
     function Modal() {
         _classCallCheck(this, Modal);
 
-        this.signUp = (0, _jquery2.default)(".signup");
-        this.logIn = (0, _jquery2.default)(".login");
+        this.signUpBtn = (0, _jquery2.default)(".signup-btn");
+        this.loginBtn = (0, _jquery2.default)(".login-btn");
+        this.signUpModal = (0, _jquery2.default)(".modal-signup");
+        this.loginModal = (0, _jquery2.default)(".modal-login");
         this.close = (0, _jquery2.default)(".modal__close");
         this.container = (0, _jquery2.default)(".modal-container");
         this.events();
@@ -10461,6 +10463,24 @@ var Modal = function () {
         key: "events",
         value: function events() {
             this.close.click(this.closeModal.bind(this));
+            this.signUpBtn.click(this.openSignUp.bind(this));
+            this.loginBtn.click(this.openLogin.bind(this));
+        }
+    }, {
+        key: "openLogin",
+        value: function openLogin() {
+            console.log("Open login");
+            this.container.removeClass("modal-container--hidden");
+            this.signUpModal.addClass("modal-signup--hidden");
+            this.loginModal.removeClass("modal-login--hidden");
+        }
+    }, {
+        key: "openSignUp",
+        value: function openSignUp() {
+            console.log("Open signup");
+            this.container.removeClass("modal-container--hidden");
+            this.loginModal.addClass("modal-login--hidden");
+            this.signUpModal.removeClass("modal-signup--hidden");
         }
     }, {
         key: "closeModal",

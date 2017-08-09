@@ -73,8 +73,10 @@ body, html {
     }
 
 .header-login {
+        position: relative;
         display: none;
         float: right;
+        cursor: default;
         margin: 0.5em 3em;
         font-weight: 800;
     }
