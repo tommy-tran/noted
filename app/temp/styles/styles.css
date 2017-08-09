@@ -334,3 +334,12 @@ body, html {
             color: white;
             cursor: default;
         }
+
+.modal-container {
+    z-index: 8;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+}
