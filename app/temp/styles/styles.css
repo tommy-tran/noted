@@ -76,7 +76,7 @@ body, html {
         position: relative;
         display: none;
         float: right;
-        cursor: default;
+        cursor: pointer;
         margin: 0.5em 3em;
         font-weight: 800;
     }

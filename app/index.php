@@ -36,7 +36,7 @@
     <div class="modal-container modal-container--hidden">
       <form class="modal modal-signup modal-signup--hidden">
         <div class="modal__close">X</div>
-        <div class="modal__header">CREATE A NEW ACCOUNT</div>
+        <div class="modal__header">Register</div>
         <div class="modal__content">
           <div id="message"></div>
           <input type="text" id="username" placeholder="Username">
