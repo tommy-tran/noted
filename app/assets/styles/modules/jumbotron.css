@@ -1,6 +1,5 @@
 .jumbotron {
-    margin-top: 1.5em;
-    height: 90%;
+    height: 100%;
     display: flex;
     color: white;
     flex-direction: column;
@@ -10,12 +9,16 @@
     text-shadow: black 2px 0 10px; 
 
     button {
-        background-color: white;
+        background-color: #89b56e;
         width: 10em;
         height: 5em;
         border-radius: 3em;
         outline: 0;
         margin-left: auto;
         margin-right: auto;
+        font-size: 0.5em;
+        font-weight: 600;
+        color: white;
+        text-shadow: black 1px 0 2px; 
     }
 }

@@ -6,6 +6,7 @@ header {
 }
 
 body, html {
+    margin: 0 0;
     height: 100%;
     background: url("../../assets/images/oli-dale-139169.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -224,8 +225,7 @@ body, html {
         }
 
 .jumbotron {
-    margin-top: 1.5em;
-    height: 90%;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -243,17 +243,26 @@ body, html {
 }
 
 .jumbotron button {
-        background-color: white;
+        background-color: #89b56e;
         width: 10em;
         height: 5em;
         border-radius: 3em;
         outline: 0;
         margin-left: auto;
         margin-right: auto;
+        font-size: 0.5em;
+        font-weight: 600;
+        color: white;
+        text-shadow: black 1px 0 2px; 
     }
 
 .footer {
     position: absolute;
     width: 100%;
     text-align: center;
+    padding: 0 0;
+    margin: 0 0;
+    bottom: 0;
+    background-color: white;
+    font-size: 1.2em;
 }
