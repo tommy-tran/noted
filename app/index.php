@@ -32,6 +32,21 @@
           <div class="header__menu-icon__middle"></div>
         </div>
     </header>
+
+    <form class="modal">
+      <div class="modal__header">CREATE A NEW ACCOUNT</div>
+      <div class="modal__content">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <div>
+          <input class="button" type="submit">
+          <button class="button">Cancel</button>
+        </div>
+        
+      </div>
+    </form>
     
     <div class="jumbotron">
       <h1>Noted</h1>
