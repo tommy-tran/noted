@@ -62,7 +62,7 @@
               <input type="checkbox" name="rememberme" id="rememberme">
               Remember me
             </label>
-            <a class="modal__extra--pullright">Forgot Password?</a>
+            <a class="modal__extra--pullright modal__extra-forgot">Forgot Username/Password?</a>
           </div>
           <input class="button login-submit" type="submit">
         </div>

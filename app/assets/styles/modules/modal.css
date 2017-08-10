@@ -34,6 +34,10 @@
         height: 220px;
         width: 400px;
 
+        &--hidden {
+            visibility: hidden;
+        }
+
         .modal {
 
             &__header {
