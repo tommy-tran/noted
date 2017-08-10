@@ -36,10 +36,10 @@
 
     &-login {
         cursor: pointer;
+    }
 
-        @mixin Large {
-            display: block;
-        }
+    &-logout {
+        cursor: pointer;
     }
 
     &__menu-content {
