@@ -38,7 +38,7 @@ class MobileMenu {
                     $(e).removeClass("header-link--hidden");
                 }
             )
-        }, interval * 80);
+        }, interval * 40);
     }
 
     highlightItem() {

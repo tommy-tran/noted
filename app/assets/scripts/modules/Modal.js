@@ -18,14 +18,12 @@ class Modal {
     }
 
     openLogin() {
-        console.log("Open login");
         this.container.removeClass("modal-container--hidden");
         this.signUpModal.addClass("modal-signup--hidden");
         this.loginModal.removeClass("modal-login--hidden");
     }
 
     openSignUp() {
-        console.log("Open signup");
         this.container.removeClass("modal-container--hidden");
         this.loginModal.addClass("modal-login--hidden");
         this.signUpModal.removeClass("modal-signup--hidden");
