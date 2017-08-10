@@ -36,20 +36,20 @@
     
     <div class="notes">
       <div class="notes__extra-container notes__extra-main">
-        <div class="notes__button-container"><button class="notes__button">Add Note</button></div>
-        <div class="notes__button-container notes__button--pull-right"><button class="notes__button">Edit</button></div>
+        <div class="notes__button-container"><button class="notes__button notes__button-blue">Add Note</button></div>
+        <div class="notes__button-container notes__button--pull-right"><button class="notes__button notes__button-red">Edit</button></div>
       </div>
       <div class="notes__extra-container notes__extra-edit">
-        <div class="notes__button-container"><button class="notes__button">Add Note</button></div>
-        <div class="notes__button-container notes__button--pull-right"><button class="notes__button">Done</button></div>
+        <div class="notes__button-container"><button class="notes__button notes__button-blue">Add Note</button></div>
+        <div class="notes__button-container notes__button--pull-right"><button class="notes__button notes__button-green">Done</button></div>
       </div>
       <div class="notes__extra-container notes__extra-add">
-        <div class="notes__button-container"><button class="notes__button">Save</button></div>
-        <div class="notes__button-container notes__button--pull-right"><button class="notes__button">Cancel</button></div>
+        <div class="notes__button-container"><button class="notes__button notes__button-green">Save</button></div>
+        <div class="notes__button-container notes__button--pull-right"><button class="notes__button notes__button-red">Cancel</button></div>
       </div>
-
+      <div class="notes__list">
+        <div class="notes__list-item">Note</div>
       </div>
-      <div class="notes__list"></div>
     </div>
 
     <div class="footer">

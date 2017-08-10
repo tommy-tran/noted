@@ -23,6 +23,17 @@
         font-weight: 600;
         color: white;
 
+        &-green {
+            background-color: #89b56e;
+        }
+
+        &-blue {
+            background-color: #8babdd;
+        }
+
+        &-red {
+            background-color: #dd5454;
+        }
 
 
         &-container {
@@ -41,12 +52,10 @@
     
         &-container {
             display: flex;
-            background-color: darkgray;
         }
     }
 
     &__list {
-        height: 100px;
         background-color: gray;
     }
 }
