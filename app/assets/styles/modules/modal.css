@@ -14,7 +14,7 @@
     
     &-signup {
         height: 400px;
-        width: 640px;
+        width: 560px;
 
         &--hidden {
             visibility: hidden;
@@ -23,7 +23,7 @@
 
     &-login {
         height: 310px;
-        width: 580px;
+        width: 530px;
 
         &--hidden {
             visibility: hidden;
@@ -60,8 +60,8 @@
     }
 
     &__header {
-        margin-top: 36px;
-        margin-bottom: 20px;
+        margin-top: 30px;
+        margin-bottom: 18px;
         font-size: 2em;
     }
 
@@ -73,7 +73,7 @@
         &-input {
             font-family: 'Roboto', sans-serif;
             height: 2.2em;
-            width: 500px;
+            width: 450px;
             font-size: 1.1em;
             border-radius: 10px;
             margin: 5px auto;
@@ -83,19 +83,20 @@
 
         .button {
             color: darkslategrey;
-            margin: 12px auto;
+            margin: 15px auto;
             width: 200px;
             height: 50px;
             border-radius: 25px;
             padding-left: 0;
             background-color: #efefef;
             font-size: 1.3em;
+            outline: 0;
         }
     }
 
     &__close {
         position: absolute;
-        right: 32px;
+        right: 34px;
         top: 24px;
         transform: scaleX(1.25);
         color: black;
@@ -108,7 +109,7 @@
     }
 
     &-container {
-        z-index: 8;
+        z-index: 10;
         position: fixed;
         height: 100%;
         width: 100%;
@@ -127,12 +128,14 @@
             float: left;
             padding-left: 32px;
             padding-top: 5px;
+            padding-bottom: 2px;
         }
 
         &--pullright {
             float: right;
-            padding-right: 32px;
+            margin-right: 34px;
             padding-top: 5px;
+            padding-bottom: 2px;
         }
 
         a {

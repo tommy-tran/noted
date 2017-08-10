@@ -6,6 +6,7 @@
     position: fixed;
     font-size: 1.2em;
     font-weight: 800;
+    z-index: 9;
     border-bottom: solid gray 1px;
 
     &-userinfo {

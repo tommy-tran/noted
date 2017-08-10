@@ -8,9 +8,10 @@
     height: 680px;
     width: 960px;
     margin: auto auto;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 40px 40px;
     border-radius: 40px;
+    border: solid 2px black;
     
     &--hidden {
         display: none;
@@ -27,37 +28,37 @@
 
         &-green {
             background-color: rgba(27, 76, 27, 0.1);
-            border: solid 3px #db574a;
+            border: solid 2px #db574a;
             border-color: #379e33;
             color: #379e33;
 
             &:hover {
-                background-color: rgba(27, 76, 27, 0.2);
+                background-color: rgba(27, 76, 27, 0.15);
                 border-color: #276d27;
                 color: #276d27;
             }
 
             &:active {
-                background-color: rgba(27, 76, 27, 0.4);
+                background-color: rgba(27, 76, 27, 0.2);
                 border-color: #1e511e;
                 color: #1e511e;
             }
         }
 
         &-blue {
-            background-color: rgba(39, 73, 109, 0.15);
-            border: solid 3px #6496c8;
+            background-color: rgba(39, 73, 109, 0.1);
+            border: solid 2px #6496c8;
             border-color: #346392;
             color: #346392;
 
             &:hover {
-                background-color: rgba(39, 73, 109, 0.3);
+                background-color: rgba(39, 73, 109, 0.15);
                 border-color: #27496d;
                 color: #27496d;
             }
 
             &:active {
-                background-color: rgba(39, 73, 109, 0.5);
+                background-color: rgba(39, 73, 109, 0.2);
                 border-color: #1b334c;
                 color: #1b334c;
             }
@@ -65,20 +66,20 @@
 
         &-red {
             background-color: rgba(135, 52, 44, 0.1);
-            border: solid 3px #db574a;
-            border-color: #a03636;
-            color: #a03636;
+            border: solid 2px #db574a;
+            border-color: #d34c4c;
+            color: #d34c4c;
 
             &:hover {
-                background-color: rgba(135, 52, 44, 0.2);
-                border-color: #9e3d34;
-                color: #9e3d34;
+                background-color: rgba(135, 52, 44, 0.15);
+                border-color: #aa4238;
+                color: #aa4238;
             }
 
             &:active {
-                background-color: rgba(135, 52, 44, 0.4);
-                border-color: #87342c;
-                color: #87342c;
+                background-color: rgba(135, 52, 44, 0.2);
+                border-color: #91372e;
+                color: #91372e;
             }
         }
 

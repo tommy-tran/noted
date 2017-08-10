@@ -1,17 +1,24 @@
 .jumbotron {
     height: 100%;
     display: flex;
+    position: absolute;
     color: white;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     font-size: 2.2em;
-    text-shadow: black 2px 0 10px; 
+    text-shadow: black 2px 0 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 3%;
+    margin: auto auto;
+    z-index: 1;
 
     button {
         background-color: #89b56e;
-        width: 10em;
-        height: 5em;
+        width: 11em;
+        height: 4.5em;
         border-radius: 3em;
         outline: 0;
         margin-left: auto;
@@ -19,6 +26,6 @@
         font-size: 0.5em;
         font-weight: 600;
         color: white;
-        text-shadow: black 1px 0 2px; 
+        text-shadow: black 1px 0 1px; 
     }
 }
