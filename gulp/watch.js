@@ -17,7 +17,7 @@ gulp.task('watch', ['connect'], function() {
         port: 8910
     });
 
-    watch('./app/index.php', function() {
+    watch('./app/*.php', function() {
         browserSync.reload();
     });
     watch('./app/assets/styles/**/*.css', function() {

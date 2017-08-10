@@ -6,7 +6,7 @@
     text-align: center;
 
     ul {
-        margin: 1.5em 0;
+        margin: 1.15em 0;
         padding: 0 0;
     }
 
@@ -16,16 +16,10 @@
     }
 
     a {
-        transition: all 0.2s linear;
-        color: black;
         text-decoration: none;
-        font-weight: 800;
-        margin: 0 0;
-        font-size: 1.5em;
 
         @mixin Large {
-            font-size: 1em;
-            margin: 0 8%;
+            margin: 0 0.75%;
         }
     }
 }

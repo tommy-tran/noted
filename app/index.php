@@ -13,7 +13,7 @@
   </head>
   <body>
     <header class="header">
-        <span>Noted</span>
+        <span class="header-title">Noted</span>
         <div class="header__menu-content">
           <div class="header__btn-container"></div>
           <nav class="primary-nav">
@@ -22,12 +22,13 @@
               <a href="#"><li class="header-link">Home</li></a>
               <a href="#"><li class="header-link">Help</li></a>
               <a href="#"><li class="header-link">Contact</li></a>
+              <li class="header-login header-link login-btn">Login</li>
             <!--Icon-->
             </ul>
           </nav>
         </div>
 
-        <div class="header-login login-btn">Login</div>
+        
         <div class="header__menu-icon">
           <div class="header__menu-icon__middle"></div>
         </div>
