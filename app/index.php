@@ -67,6 +67,17 @@
           <input class="button login-submit" type="submit">
         </div>
       </form>
+
+      <!--Forgot information-->
+      <form class="modal modal-forgot modal-forgot--hidden">
+        <div class="modal__close">X</div>
+        <div class="modal__header">Forgot Password?</div>
+        <div class="modal__content">
+          <div id="forgot-message"></div>
+          <input type="email" class="modal__content-input" id="forgot-email"name="forgot-email" placeholder="Email">
+          <input class="button forgot-submit" type="submit">
+        </div>
+      </form>
     </div>
     
     <div class="jumbotron">

@@ -13,8 +13,8 @@
     border-radius: 50px;
     
     &-signup {
-        height: 410px;
-        width: 660px;
+        height: 400px;
+        width: 640px;
 
         &--hidden {
             visibility: hidden;
@@ -22,11 +22,36 @@
     }
 
     &-login {
-        height: 320px;
+        height: 310px;
         width: 580px;
 
         &--hidden {
             visibility: hidden;
+        }
+    }
+
+    &-forgot {
+        height: 220px;
+        width: 400px;
+
+        .modal {
+
+            &__header {
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+        
+            &__content {
+                &-input {
+                    width: 320px;
+                }
+
+                .button {
+                    width: 100px;
+                    height: 50px;
+                    border-radius: 20px;
+                }
+            }
         }
     }
 
@@ -53,12 +78,14 @@
         }
 
         .button {
-            margin: 20px auto;
+            color: darkslategrey;
+            margin: 10px auto;
             width: 200px;
             height: 50px;
             border-radius: 25px;
             padding-left: 0;
             background-color: #efefef;
+            font-size: 1.3em;
         }
     }
 
@@ -102,6 +129,10 @@
             float: right;
             padding-right: 32px;
             padding-top: 5px;
+        }
+
+        a {
+            cursor: pointer;
         }
     }
 }
