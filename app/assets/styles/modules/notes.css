@@ -1,0 +1,52 @@
+.notes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    height: 480px;
+    width: 960px;
+    margin: auto auto;
+    
+    &--hidden {
+        display: none;
+    }
+
+    &__button {
+        background-color: black;
+        width: 160px;
+        height: 80px;
+        border-radius: 30px;
+        outline: 0;
+        font-size: 26px;
+        font-weight: 600;
+        color: white;
+
+
+
+        &-container {
+            flex-grow: 1;
+        }
+
+        &--pull-right {
+            text-align: right;
+        }
+    }
+
+    &__extra {
+        &--hidden {
+            display: none !important;
+        }
+    
+        &-container {
+            display: flex;
+            background-color: darkgray;
+        }
+    }
+
+    &__list {
+        height: 100px;
+        background-color: gray;
+    }
+}
