@@ -50,7 +50,7 @@
       <div class="notes__list">
         <div class="notes__list-item">Note</div>
       </div>
-      <div class="notes__notepad"><textarea rows=18></textarea></div>
+      <div class="notes__notepad"><textarea id="notepad" rows=18></textarea></div>
     </div>
 
     <div class="footer">

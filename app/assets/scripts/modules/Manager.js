@@ -9,6 +9,7 @@ class Manager {
         this.add = $(".notes__extra-add");
         this.addBtn = $(".notes__button-add");
         this.notepad = $(".notes__notepad");
+        this.notepadtext = $("#notepad");
         this.events();
     }
 
@@ -16,6 +17,17 @@ class Manager {
         this.mainBtn.click(this.openMain.bind(this));
         this.editBtn.click(this.openEdit.bind(this));
         this.addBtn.click(this.openAdd.bind(this));
+        this.changeNotepadSize();
+    }
+
+    changeNotepadSize() {
+        if ($(window).height() < 680) {
+            console.log("HEYYYY");
+            this.notepadtext.attr("rows", 12);
+        } else {
+            this.notepadtext.attr("rows", 18);
+        }
+
     }
 
     openMain() {
