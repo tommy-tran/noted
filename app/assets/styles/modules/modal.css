@@ -59,6 +59,76 @@
         }
     }
 
+    &-changeemail {
+        height: 260px;
+        width: 420px;
+
+        &--hidden {
+            visibility: hidden;
+        }
+
+        .modal {
+
+            &__header {
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+        
+            &__content {
+                &-input {
+                    width: 320px;
+                }
+
+                .button {
+                    width: 100px;
+                    height: 50px;
+                    border-radius: 20px;
+                }
+            }
+
+            &__close {
+                top: 20px;
+                right: 28px;
+            }
+        }
+    }
+
+    &-changepassword {
+        height: 260px;
+        width: 420px;
+
+        &--hidden {
+            visibility: hidden;
+        }
+
+        .modal {
+
+            &__header {
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+        
+            &__content {
+                &-input {
+                    width: 320px;
+                }
+
+                .button {
+                    width: 100px;
+                    height: 50px;
+                    border-radius: 20px;
+                }
+            }
+
+            &__close {
+                top: 15px;
+                right: 22px;
+            }
+        }
+
+
+    }
+
     &__header {
         margin-top: 30px;
         margin-bottom: 18px;

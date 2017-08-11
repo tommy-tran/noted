@@ -34,6 +34,30 @@
         </div>
     </header>
 
+    <div class="modal-container modal-container--hidden">
+        <!--Change Email-->
+        <form method="post" class="modal modal-changeemail modal-changeemail--hidden">
+            <div class="modal__close">X</div>
+            <div class="modal__header">Want to change your current registered email?</div>
+            <div class="modal__content">
+                <div id="changeemail-message"></div>
+                <input type="email" class="modal__content-input" id="change-email"name="change-email" placeholder="New Email">
+                <input class="button changeemail-submit" type="submit">
+            </div>
+        </form>
+
+        <!--Change Email-->
+        <form method="post" class="modal modal-changepassword modal-changepassword--hidden">
+            <div class="modal__close">X</div>
+            <div class="modal__header">Want to change your current password?</div>
+            <div class="modal__content">
+                <div id="changepassword-message"></div>
+                <input type="password" class="modal__content-input" id="change-password"name="change-password" placeholder="New Password">
+                <input class="button changepassword-submit" type="submit">
+            </div>
+        </form>
+    </div>
+
     <div class="profile">
         <div class="profile__container">
             <h2 class="profile-header">Profile</h2>
@@ -58,21 +82,11 @@
                 </tr>
             </table>
         </div>
-        
     </div>
 
-<div class="modal-container modal-container--hidden">
-      <!--Change Email-->
-      <form method="post" class="modal modal-changeemail modal-changeemail--hidden">
-        <div class="modal__close">X</div>
-        <div class="modal__header">Want to change the registered email?</div>
-        <div class="modal__content">
-          <div id="changeemail-message"></div>
-          <input type="email" class="modal__content-input" id="change-email"name="change-email" placeholder="New Email">
-          <input class="button forgot-submit" type="submit">
-        </div>
-      </form>
-    </div>
+
+
+
 
     <div class="footer">
       <p>Created by Tommy Tran</p>

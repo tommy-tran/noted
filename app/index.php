@@ -27,15 +27,12 @@
             </ul>
           </nav>
         </div>
-
-        
         <div class="header__menu-icon">
           <div class="header__menu-icon__middle"></div>
         </div>
     </header>
 
     <div class="modal-container modal-container--hidden">
-
     <!--Sign Up-->
       <form method="post" class="modal modal-signup modal-signup--hidden">
         <div class="modal__close">X</div>
