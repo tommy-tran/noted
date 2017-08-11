@@ -46,13 +46,14 @@
             </div>
         </form>
 
-        <!--Change Email-->
+        <!--Change Password-->
         <form method="post" class="modal modal-changepassword modal-changepassword--hidden">
             <div class="modal__close">X</div>
             <div class="modal__header">Want to change your current password?</div>
             <div class="modal__content">
                 <div id="changepassword-message"></div>
-                <input type="password" class="modal__content-input" id="change-password"name="change-password" placeholder="New Password">
+                <input type="password" class="modal__content-input" id="change-password-old"name="change-password-old" placeholder="Old Password">
+                <input type="password" class="modal__content-input" id="change-password-new"name="change-password-new" placeholder="New Password">
                 <input class="button changepassword-submit" type="submit">
             </div>
         </form>
