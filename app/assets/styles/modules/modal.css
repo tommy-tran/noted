@@ -96,7 +96,7 @@
 
     &__close {
         position: absolute;
-        right: 34px;
+        right: 32px;
         top: 24px;
         transform: scaleX(1.25);
         color: black;

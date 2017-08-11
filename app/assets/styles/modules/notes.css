@@ -94,6 +94,24 @@
         }
     }
 
+    &__notepad {
+        margin-top: 24px;
+        margin-bottom: 20px;
+
+        textarea {
+            font-family: 'Arvo', 'sans-serif';
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 100%;
+            border-radius: 40px;
+            resize: none;
+            padding: 25px 26px;
+            outline: 0;
+            font-size: 23px;
+            height: 100%;
+        }
+    }
+
     &__extra {
         &-container {
             display: flex;
@@ -101,6 +119,7 @@
     }
 
     &__list {
+        display: none;
         background-color: gray;
     }
 }

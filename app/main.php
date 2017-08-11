@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Roboto|Arvo" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="temp/styles/styles.css">
     <title>Notepad</title>
@@ -50,6 +50,7 @@
       <div class="notes__list">
         <div class="notes__list-item">Note</div>
       </div>
+      <div class="notes__notepad"><textarea rows=18></textarea></div>
     </div>
 
     <div class="footer">
