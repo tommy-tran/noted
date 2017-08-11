@@ -1,4 +1,5 @@
 .notes {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -14,7 +15,7 @@
     border: solid 2px black;
     
     &--hidden {
-        display: none;
+        display: none !important;
     }
 
     &__button {
@@ -94,10 +95,6 @@
     }
 
     &__extra {
-        &--hidden {
-            display: none !important;
-        }
-    
         &-container {
             display: flex;
         }

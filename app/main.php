@@ -36,16 +36,16 @@
     
     <div class="notes">
       <div class="notes__extra-container notes__extra-main">
-        <div class="notes__button-container"><button class="notes__button notes__button-blue">Add Note</button></div>
-        <div class="notes__button-container notes__button--pull-right"><button class="notes__button notes__button-red">Edit</button></div>
+        <div class="notes__button-container"><button class="notes__button notes__button-blue notes__button-add">Add Note</button></div>
+        <div class="notes__button-container notes__button--pull-right"><button class="notes__button notes__button-red notes__button-edit">Edit</button></div>
       </div>
-      <div class="notes__extra-container notes__extra-edit">
-        <div class="notes__button-container"><button class="notes__button notes__button-blue">Add Note</button></div>
-        <div class="notes__button-container notes__button--pull-right"><button class="notes__button notes__button-green">Done</button></div>
+      <div class="notes__extra-container notes__extra-edit notes--hidden">
+        <div class="notes__button-container"><button class="notes__button notes__button-blue notes__button-add">Add Note</button></div>
+        <div class="notes__button-container notes__button--pull-right"><button class="notes__button notes__button-green notes__button-done">Done</button></div>
       </div>
-      <div class="notes__extra-container notes__extra-add">
-        <div class="notes__button-container"><button class="notes__button notes__button-green">Save</button></div>
-        <div class="notes__button-container notes__button--pull-right"><button class="notes__button notes__button-red">Cancel</button></div>
+      <div class="notes__extra-container notes__extra-add notes--hidden">
+        <div class="notes__button-container"><button class="notes__button notes__button-green notes__button-save">Save</button></div>
+        <div class="notes__button-container notes__button--pull-right"><button class="notes__button notes__button-red notes__button-cancel">Cancel</button></div>
       </div>
       <div class="notes__list">
         <div class="notes__list-item">Note</div>
