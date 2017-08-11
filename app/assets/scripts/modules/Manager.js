@@ -22,7 +22,6 @@ class Manager {
 
     changeNotepadSize() {
         if ($(window).height() < 680) {
-            console.log("HEYYYY");
             this.notepadtext.attr("rows", 12);
         } else {
             this.notepadtext.attr("rows", 18);

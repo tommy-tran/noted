@@ -37,7 +37,7 @@
     <div class="modal-container modal-container--hidden">
 
     <!--Sign Up-->
-      <form class="modal modal-signup modal-signup--hidden">
+      <form method="post" class="modal modal-signup modal-signup--hidden">
         <div class="modal__close">X</div>
         <div class="modal__header">Register</div>
         <div class="modal__content">
@@ -51,7 +51,7 @@
       </form>
 
     <!--Login-->
-      <form class="modal modal-login modal-login--hidden">
+      <form method="post" class="modal modal-login modal-login--hidden">
         <div class="modal__close">X</div>
         <div class="modal__header">Log in</div>
         <div class="modal__content">
@@ -70,7 +70,7 @@
       </form>
 
       <!--Forgot information-->
-      <form class="modal modal-forgot modal-forgot--hidden">
+      <form method="post" class="modal modal-forgot modal-forgot--hidden">
         <div class="modal__close">X</div>
         <div class="modal__header">Forgot Password?</div>
         <div class="modal__content">

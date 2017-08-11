@@ -10,9 +10,13 @@
     border-bottom: solid gray 1px;
 
     &-userinfo {
-        float: right;
-        padding: 5px 5px;
-        position: relative;
+        font-size: 0.8em;
+        color: darkslategray;
+
+        @mixin Large {
+            float: right;
+            padding: 5px 5px;
+        }
     }
 
     &-link {

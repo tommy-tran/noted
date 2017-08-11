@@ -8,8 +8,6 @@
     flex-direction: column;
     margin: auto auto;
     background-color: rgba(255, 255, 255, 0.85);
-    padding: 20px 24px;
-    
     
     @mixin Large {
         padding: 30px 40px;
@@ -30,8 +28,8 @@
         outline: 0;
         font-size: 26px;
         color: black;
-        width: 140px;
-        height: 90px;
+        width: 144px;
+        height: 100px;
         @mixin Large {
             width: 180px;
             height: 80px;    
@@ -105,8 +103,11 @@
     }
 
     &__notepad {
-        margin-top: 24px;
-        margin-bottom: 20px;
+        @mixin Large {
+            margin-top: 24px;
+            margin-bottom: 20px;
+        }
+
 
         &--hide {
             display: none;
@@ -117,19 +118,29 @@
             box-sizing: border-box;
             width: 100%;
             max-width: 100%;
-            border-radius: 40px;
+            border-radius: 30px;
             resize: none;
             padding: 25px 28px;
             outline: 0;
-            font-size: 23px;
+            font-size: 22px;
             height: 100%;
 
+            @mixin Large {
+                font-size: 23px;
+                border-radius: 40px;
+                padding: 25px 28px;
+            }
         }
     }
 
     &__extra {
         &-container {
             display: flex;
+            padding: 20px 20px;
+
+            @mixin Large {
+                padding: 0 0;
+            }
         }
     }
 
