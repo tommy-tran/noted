@@ -8,8 +8,12 @@ class Modal {
         this.loginModal = $(".modal-login");
         this.close = $(".modal__close");
         this.container = $(".modal-container");
-        this.forgotLink = $(".modal__extra-forgot");
-        this.forgotModal= $(".modal-forgot");
+        this.forgotEmailLink = $(".modal__extra-forgot");
+        this.forgotModal = $(".modal-forgot");
+        this.changeEmail = $(".modal-changeemail");
+        this.changeEmailBtn= $(".changeemail-btn");
+        this.changePassword= $(".modal-changepassword");
+        this.changePasswordBtn= $(".changepassword-btn");
         this.events();
     }
 
@@ -17,7 +21,9 @@ class Modal {
         this.close.click(this.closeModal.bind(this));
         this.signUpBtn.click(this.openSignUp.bind(this));
         this.loginBtn.click(this.openLogin.bind(this));
-        this.forgotLink.click(this.openForgot.bind(this));
+        this.forgotEmailLink.click(this.openForgotEmail.bind(this));
+        this.changeEmailBtn.click(this.openChangeEmail.bind(this));
+        this.changePasswordBtn.click(this.openChangePassword.bind(this));
     }
 
     openLogin() {
@@ -34,11 +40,23 @@ class Modal {
         this.forgotModal.addClass("modal-forgot--hidden");
     }
 
-    openForgot() {
+    openForgotEmail() {
         this.container.removeClass("modal-container--hidden");
         this.loginModal.addClass("modal-login--hidden");
         this.signUpModal.addClass("modal-signup--hidden");
         this.forgotModal.removeClass("modal-forgot--hidden");
+    }
+
+    openChangeEmail() {
+        this.container.removeClass("modal-container--hidden");
+        this.changeEmail.removeClass("modal-changeemail--hidden");
+        this.changePassword.addClass("modal-changepassword--hidden");
+    }
+
+    openChangePassword() {
+        this.container.removeClass("modal-container--hidden");
+        this.changeEmail.addClass("modal-changeemail--hidden");
+        this.changePassword.removeClass("modal-changepassword--hidden");
     }
     
     closeModal() {

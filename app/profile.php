@@ -57,7 +57,6 @@
             </div>
         </form>
     </div>
-
     <div class="profile">
         <div class="profile__container">
             <h2 class="profile-header">Profile</h2>
@@ -66,11 +65,11 @@
                     <td>Username</td>
                     <td>XD</td>
                 </tr>
-                <tr class="profile__information-row profile-email">
+                <tr class="profile__information-row profile-email changeemail-btn">
                     <td>Email</td>
                     <td>Jimmy</td>
                 </tr>
-                <tr class="profile__information-row profile-password">
+                <tr class="profile__information-row profile-password changepassword-btn">
                     <div>
                         <td>Password</td>
                         <td>******</td>
@@ -83,11 +82,6 @@
             </table>
         </div>
     </div>
-
-
-
-
-
     <div class="footer">
       <p>Created by Tommy Tran</p>
     </div>
