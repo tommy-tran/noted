@@ -31,10 +31,11 @@
     // Get Password
     if (empty($_POST["signup-password"])) {
         $errors .= $missingPassword;
-    } elseif (!(strlen($_POST["signup-password"]))>6
+    } elseif (!(strlen($_POST["signup-password"])>=6
         and (preg_match('/[A-Z]/', $_POST["signup-password"])) 
-        and (preg_match('/[0-9]/',$_POST["signup-password"]))) {
-        $errors .= $invalidPassword;
+        and (preg_match('/[0-9]/',$_POST["signup-password"]))
+        )) {
+            $errors .= $invalidPassword;
     } else {
         $password = filter_var($_POST["signup-password"], FILTER_SANITIZE_STRING);
         if (empty($_POST["signup-confirm"])) {
