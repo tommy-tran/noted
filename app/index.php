@@ -39,12 +39,8 @@
         <div class="message-container">
           <div class="message-header"></div>
           <div class="message-signup">
-            <p>Something went wrong with your stuff</p>
-            <p>Something went wrong with your stuff</p>
-            <p>Something went wrong with your stuff</p>
           </div>
           <div class="message-login">
-            <p>Something went wrong with your stuff</p>
           </div>
           <div class="message-forgot"></div>
         </div>
