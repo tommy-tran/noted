@@ -14,6 +14,8 @@ class Modal {
         this.changeEmailBtn= $(".changeemail-btn");
         this.changePassword= $(".modal-changepassword");
         this.changePasswordBtn= $(".changepassword-btn");
+        this.messageModal = $(".message");
+        this.closeMessageBtn = $(".message-close");
         this.events();
     }
 
@@ -24,6 +26,7 @@ class Modal {
         this.forgotEmailLink.click(this.openForgotEmail.bind(this));
         this.changeEmailBtn.click(this.openChangeEmail.bind(this));
         this.changePasswordBtn.click(this.openChangePassword.bind(this));
+        this.closeMessageBtn.click(this.closeMessage.bind(this));
     }
 
     openLogin() {
@@ -57,6 +60,10 @@ class Modal {
         this.container.removeClass("modal-container--hidden");
         this.changeEmail.addClass("modal-changeemail--hidden");
         this.changePassword.removeClass("modal-changepassword--hidden");
+    }
+
+    closeMessage() {
+        this.messageModal.addClass("message--hidden");
     }
     
     closeModal() {

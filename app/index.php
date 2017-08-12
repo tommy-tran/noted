@@ -35,16 +35,20 @@
     
 
     <div class="modal-container modal-container--hidden">
-      <div class="message message--hidden">
+      <div class="message ">
         <div class="message-container">
           <div class="message-header"></div>
           <div class="message-signup">
             <p>Something went wrong with your stuff</p>
+            <p>Something went wrong with your stuff</p>
+            <p>Something went wrong with your stuff</p>
           </div>
-          <div class="message-login"></div>
+          <div class="message-login">
+            <p>Something went wrong with your stuff</p>
+          </div>
           <div class="message-forgot"></div>
         </div>
-        <button class="button">OK</button>
+        <button class="button message-close">OK</button>
       </div>
     <!--Sign Up-->
       <form method="post" id="signupform" class="modal modal-signup modal-signup--hidden">
