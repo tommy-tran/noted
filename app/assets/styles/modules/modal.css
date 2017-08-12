@@ -14,7 +14,7 @@
     
     &-signup {
         height: 400px;
-        width: 560px;
+        width: 500px;
 
         &--hidden {
             visibility: hidden;
@@ -23,7 +23,7 @@
 
     &-login {
         height: 310px;
-        width: 530px;
+        width: 480px;
 
         &--hidden {
             visibility: hidden;
@@ -39,7 +39,6 @@
         }
 
         .modal {
-
             &__header {
                 margin-top: 30px;
                 margin-bottom: 20px;
@@ -120,8 +119,8 @@
             }
 
             &__close {
-                top: 15px;
-                right: 22px;
+                top: 18px;
+                right: 24px;
             }
         }
 
@@ -142,11 +141,11 @@
         &-input {
             font-family: 'Roboto', sans-serif;
             height: 2.2em;
-            width: 450px;
+            width: 400px;
             font-size: 1.1em;
             border-radius: 10px;
             margin: 5px auto;
-            padding-left: 10px;
+            padding-left: 15px;
             outline: 0;
         }
 

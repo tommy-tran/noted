@@ -34,11 +34,11 @@
 
     <div class="modal-container modal-container--hidden">
     <!--Sign Up-->
-      <form method="post" class="modal modal-signup modal-signup--hidden">
+      <form method="post" id="signupform" class="modal modal-signup modal-signup--hidden">
         <div class="modal__close">X</div>
         <div class="modal__header">Register</div>
         <div class="modal__content">
-          <div id="signup-message"></div>
+          <div id="signupmessage"></div>
           <input class="modal__content-input" type="text" id="signup-username" name="signup-username" placeholder="Username">
           <input class="modal__content-input" type="email" id="signup-email" name="signup-email" placeholder="Email Address">
           <input class="modal__content-input" type="password" id="signup-password" name="signup-password" placeholder="Choose a password">

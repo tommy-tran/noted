@@ -39,12 +39,18 @@
                 color: white;
             }
 
-            &:first-child:active {
-                background-color: rgba(0,0,0,0.4);
+            &:first-child {
+                cursor: default;
+                &:active {
+                    background-color: rgba(0,0,0,0.4);
+                }
             }
 
-            &:last-child:active {
-                background-color: rgba(0,0,0,0.4);
+            &:last-child {
+                cursor: default;
+                &:active {
+                    background-color: rgba(0,0,0,0.4);
+                }
             }
 
             td {

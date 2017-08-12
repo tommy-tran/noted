@@ -6,6 +6,7 @@ header {
 }
 
 body, html {
+    cursor: default;
     margin: 0 0;
     height: 100%;
     background: url("../../assets/images/bg.jpg") no-repeat center center fixed; 
