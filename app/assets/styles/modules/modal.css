@@ -41,22 +41,45 @@
     }
 
     &-forgot {
-        height: 220px;
-        width: 400px;
+        top: 30%;
+        bottom: 30%;
+        left: 3%;
+        right: 3%;
+        border-radius: 30px;
+
+        @mixin Large {
+            height: 220px;
+            width: 400px;
+        }
+
 
         &--hidden {
             visibility: hidden;
         }
 
         .modal {
+            &__close {
+                font-size: 1.5em;
+                right: 15px;
+                top: 10px;
+            }
+
             &__header {
-                margin-top: 30px;
+                margin-top: 45px;
                 margin-bottom: 20px;
+                @mixin Large {
+                    margin-top: 30px;
+                }
+                
             }
         
             &__content {
+                height: auto;
                 &-input {
-                    width: 320px;
+                    @mixin Large {
+                        width: 320px;
+                    }
+                    
                 }
 
                 .button {
