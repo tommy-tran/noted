@@ -6,15 +6,22 @@
     text-align: center;
     font-weight: 700;
     top: 0;
-    bottom: 5%;
     left: 0;
     right: 0;
+    bottom: 0;
     z-index: 10;
-    border-radius: 50px;
+    
+    @mixin Large {
+        bottom: 5%;
+        border-radius: 50px;
+    }
     
     &-signup {
-        height: 400px;
-        width: 500px;
+        @mixin Large {
+            height: 380px;
+            width: 500px;
+        }
+        
 
         &--hidden {
             visibility: hidden;
@@ -22,8 +29,11 @@
     }
 
     &-login {
-        height: 310px;
-        width: 480px;
+        @mixin Large {
+            height: 310px;
+            width: 480px;
+        }
+        
 
         &--hidden {
             visibility: hidden;
@@ -128,25 +138,38 @@
     }
 
     &__header {
-        margin-top: 30px;
-        margin-bottom: 18px;
+        margin-top: 100px;
+        margin-bottom: 10px;
         font-size: 2em;
+
+        @mixin Large {
+            margin-top: 30px;
+        }
     }
 
     &__content {
         display: flex;
         justify-content: center;
         flex-direction: column;
+        height: 60%;
+
+        @mixin Large {
+            height: auto;
+        }
 
         &-input {
             font-family: 'Roboto', sans-serif;
             height: 2.2em;
-            width: 400px;
+            width: 250px;
             font-size: 1.1em;
             border-radius: 10px;
             margin: 5px auto;
             padding-left: 15px;
             outline: 0;
+
+            @mixin Large {
+                width: 400px;
+            }
         }
 
         .button {
@@ -192,18 +215,45 @@
     }
 
     &__extra {
+        text-align: center;
+        font-size: 1.1em;
+
+        &-rememberme {
+            margin: 10px 10px;
+
+            @mixin Large {
+                margin: 0 0;
+            }
+        }
+
+        &-forgot {
+            margin: 10px 10px;
+            padding: 5px 5px;
+
+            @mixin Large {
+                margin: 0 0;
+            }
+        }
+
         &--pullleft {
-            float: left;
-            padding-left: 32px;
-            padding-top: 5px;
-            padding-bottom: 2px;
+            @mixin Large {
+                float: left;
+                padding-left: 32px;
+                padding-top: 5px;
+                padding-bottom: 2px;
+            }
+            
         }
 
         &--pullright {
-            float: right;
-            margin-right: 34px;
-            padding-top: 5px;
-            padding-bottom: 2px;
+
+            @mixin Large {
+                padding-top: 5px;
+                padding-bottom: 2px;
+                padding: 10px 0px;
+            }
+            
+                
         }
 
         a {

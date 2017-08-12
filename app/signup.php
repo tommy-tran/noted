@@ -12,14 +12,14 @@
     $differentPassword='<p><strong>Passwords don\'t match!</strong></p>';
 
     // Get Username
-    if (isset($_POST["username"])) {
+    if (empty($_POST["username"])) {
         $errors .= $missingUsername;
     } else {
         $username = filter_var($_POST["username"], FILTER_SANITIZE_STRING);
     }
 
     // Get Email
-    if (isset($_POST["email"])) {
+    if (empty($_POST["email"])) {
         $errors .= $missingEmail;
     } else {
         $email = filter_var($POST["email"], FILTER_SANITIZE_EMAIL);
@@ -29,13 +29,13 @@
     }
 
     // Get Password
-    if (isset($_POST["signup-password"])) {
+    if (empty($_POST["signup-password"])) {
         $errors .= $missingPassword;
     } elseif ((strlen($_POST["signup-password"]) > 6) and (preg_match('/[A-Z]/', $_POST["password"])) and (preg_match('/[0-9]/',$_POST["password"]))) {
         $errors .= $invalidPassword;
     } else {
         $password = filter_var($_POST["signup-password"], FILTER_SANITIZE_STRING);
-        if (!isset($_POST["signup-confirm"])) {
+        if (empty($_POST["signup-confirm"])) {
             $errors .= $missingPassword2;
         } else {
             $password2 = filter_var($_POST["signup-confirm"], FILTER_SANITIZE_STRING);
@@ -43,5 +43,10 @@
                 $errors .= $differentPassword;
             }
         }
+    }
+
+    if ($errors) {
+        $resultMessage = '<div class="modal-errormsg">' . $errors . '</div>';
+        echo $resultMessage;
     }
 ?>

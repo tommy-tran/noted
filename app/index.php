@@ -32,13 +32,25 @@
         </div>
     </header>
 
+    
+
     <div class="modal-container modal-container--hidden">
+      <div class="message message--hidden">
+        <div class="message-container">
+          <div class="message-header"></div>
+          <div class="message-signup">
+            <p>Something went wrong with your stuff</p>
+          </div>
+          <div class="message-login"></div>
+          <div class="message-forgot"></div>
+        </div>
+        <button class="button">OK</button>
+      </div>
     <!--Sign Up-->
       <form method="post" id="signupform" class="modal modal-signup modal-signup--hidden">
         <div class="modal__close">X</div>
         <div class="modal__header">Register</div>
         <div class="modal__content">
-          <div id="signupmessage"></div>
           <input class="modal__content-input" type="text" id="signup-username" name="signup-username" placeholder="Username">
           <input class="modal__content-input" type="email" id="signup-email" name="signup-email" placeholder="Email Address">
           <input class="modal__content-input" type="password" id="signup-password" name="signup-password" placeholder="Choose a password">
@@ -52,15 +64,17 @@
         <div class="modal__close">X</div>
         <div class="modal__header">Log in</div>
         <div class="modal__content">
-          <div id="login-message"></div>
+
           <input type="text" class="modal__content-input" id="login-username"name="login-username" placeholder="Username">
           <input type="password" class="modal__content-input" id="login-password" name="login-password" placeholder="Password">
           <div class="modal__extra">
-            <label class="modal__extra--pullleft">
-              <input type="checkbox" name="rememberme" id="rememberme">
-              Remember me
-            </label>
-            <a class="modal__extra--pullright modal__extra-forgot">Forgot Username/Password?</a>
+            <div class="modal__extra-rememberme">
+              <label class="modal__extra--pullleft">
+                <input type="checkbox" name="rememberme" id="rememberme">
+                Remember me
+              </label>
+            </div>
+            <div class="modal__extra-forgot"><a class="modal__extra--pullright ">Forgot Username/Password?</a></div>
           </div>
           <input class="button login-submit" type="submit">
         </div>
@@ -71,7 +85,6 @@
         <div class="modal__close">X</div>
         <div class="modal__header">Forgot Password?</div>
         <div class="modal__content">
-          <div id="forgot-message"></div>
           <input type="email" class="modal__content-input" id="forgot-email"name="forgot-email" placeholder="Email">
           <input class="button forgot-submit" type="submit">
         </div>
