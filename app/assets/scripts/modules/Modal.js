@@ -68,6 +68,7 @@ class Modal {
     
     closeModal() {
         this.container.addClass("modal-container--hidden");
+        this.messageModal.addClass("message--hidden");
     }
 }
 

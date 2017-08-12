@@ -25,8 +25,8 @@
         background-color: transparent;
         background-color: #89b56e;
         border-radius: 0 30px 30px 0;
-        top: 30%;
-        bottom: 40%;
+        top: auto;
+        left: 0%;
     }
 
     &--hidden {
@@ -36,7 +36,7 @@
         @mixin Large {
             opacity: 1;
             visibility: visible;
-            left: -25%;
+            left: -30% !important;
         }
     }
     

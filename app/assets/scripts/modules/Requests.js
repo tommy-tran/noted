@@ -10,13 +10,15 @@ $("#signupform").submit(function(e) {
         data: datatopost,
         success: function(data) {
             if (data) {
-                $(".message").removeClass(".message--hidden").delay(8000).addClass(".message--hidden");
-                $("#message-signup").html(data);
+                console.log("SUCCESS");
+                $(".message").removeClass("message--hidden");
+                $(".message-signup").html(data);
             }
         },
         error: function(data) {
-            $(".message").removeClass(".message--hidden").delay(8000).addClass(".message--hidden");
-            $("#message-signup").html("<div class='modal-message'>There was an error with the Ajax Call. Please try again later.</div>");
+            console.log("ERROR");
+            $(".message").removeClass("message--hidden");
+            $(".message-signup").html("<div class='message-signup'>There was an error with the Ajax Call. Please try again later.</div>");
         }
     });
 });

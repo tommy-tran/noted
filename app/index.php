@@ -35,7 +35,7 @@
     
 
     <div class="modal-container modal-container--hidden">
-      <div class="message ">
+      <div class="message message--hidden">
         <div class="message-container">
           <div class="message-header"></div>
           <div class="message-signup">
