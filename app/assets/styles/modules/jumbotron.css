@@ -15,7 +15,7 @@
     margin: auto auto;
     z-index: 1;
 
-    @mixin Large {
+    @mixin Medium {
         font-size: 2.2em;
         bottom: 4%;
     }

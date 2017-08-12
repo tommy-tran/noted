@@ -16,7 +16,7 @@
     transition: all 0.35s ease-out;
     text-align: center;
 
-    @mixin Large {
+    @mixin Medium {
         color: black;
         text-shadow: none;
         text-align: left;
@@ -33,7 +33,7 @@
         opacity: 0;
         visibility: hidden;
 
-        @mixin Large {
+        @mixin Medium {
             opacity: 1;
             visibility: visible;
             left: -30% !important;
@@ -54,7 +54,7 @@
         font-size: 24px;
         outline:  0;
 
-        @mixin Large {
+        @mixin Medium {
             display: none;
         }
     }

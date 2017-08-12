@@ -11,13 +11,13 @@
     bottom: 0;
     z-index: 10;
     
-    @mixin Large {
+    @mixin Medium {
         bottom: 5%;
         border-radius: 50px;
     }
     
     &-signup {
-        @mixin Large {
+        @mixin Medium {
             height: 380px;
             width: 500px;
         }
@@ -29,7 +29,7 @@
     }
 
     &-login {
-        @mixin Large {
+        @mixin Medium {
             height: 310px;
             width: 480px;
         }
@@ -47,7 +47,7 @@
         right: 3%;
         border-radius: 30px;
 
-        @mixin Large {
+        @mixin Medium {
             height: 220px;
             width: 400px;
         }
@@ -67,7 +67,7 @@
             &__header {
                 margin-top: 45px;
                 margin-bottom: 20px;
-                @mixin Large {
+                @mixin Medium {
                     margin-top: 30px;
                 }
                 
@@ -76,7 +76,7 @@
             &__content {
                 height: auto;
                 &-input {
-                    @mixin Large {
+                    @mixin Medium {
                         width: 320px;
                     }
                     
@@ -165,7 +165,7 @@
         margin-bottom: 10px;
         font-size: 2em;
 
-        @mixin Large {
+        @mixin Medium {
             margin-top: 30px;
         }
     }
@@ -176,7 +176,7 @@
         flex-direction: column;
         height: 60%;
 
-        @mixin Large {
+        @mixin Medium {
             height: auto;
         }
 
@@ -190,7 +190,7 @@
             padding-left: 15px;
             outline: 0;
 
-            @mixin Large {
+            @mixin Medium {
                 width: 400px;
             }
         }
@@ -244,7 +244,7 @@
         &-rememberme {
             margin: 10px 10px;
 
-            @mixin Large {
+            @mixin Medium {
                 margin: 0 0;
             }
         }
@@ -253,13 +253,13 @@
             margin: 10px 10px;
             padding: 5px 5px;
 
-            @mixin Large {
+            @mixin Medium {
                 margin: 0 0;
             }
         }
 
         &--pullleft {
-            @mixin Large {
+            @mixin Medium {
                 float: left;
                 padding-left: 32px;
                 padding-top: 5px;
@@ -270,7 +270,7 @@
 
         &--pullright {
 
-            @mixin Large {
+            @mixin Medium {
                 padding-top: 5px;
                 padding-bottom: 2px;
                 padding: 10px 0px;

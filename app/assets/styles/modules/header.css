@@ -13,7 +13,7 @@
         font-size: 0.8em;
         color: darkslategray;
 
-        @mixin Large {
+        @mixin Medium {
             float: right;
             padding: 5px 5px;
         }
@@ -30,19 +30,15 @@
         font-weight: 800;
         margin: 0 0;
         font-size: 1.3em;
-
-        @mixin Large {
-            margin: 0 6%;
-        }
         &--hidden {
             opacity: 0;
         }
     }
 
     &-title {
+        float: left;
         margin-left: 1em;
         font-size: 2em;
-        float: left;
     }
 
     &-login {
@@ -93,14 +89,14 @@
             }
         }
 
-        @mixin Large {
+        @mixin Medium {
             display: block;
             opacity: 1;
         }
     }
 
     &__menu-icon {
-        @mixin Large {
+        @mixin Medium {
             display: none;
         }
         width: 2em;

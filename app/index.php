@@ -15,7 +15,6 @@
     <header class="header">
         <span class="header-title">Noted</span>
         <div class="header__menu-content">
-          <div class="header__btn-container"></div>
           <nav class="primary-nav">
             <ul>
             <!--Links-->

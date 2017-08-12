@@ -1,13 +1,11 @@
-@define-mixin Large {
+@define-mixin Medium {
     @media (min-width: 560px) {
         @mixin-content;
     }
 }
 
-@define-mixin clearFix {
-    &::after {
-        content: "";
-        clear: both;
-        display: table;
+@define-mixin Large {
+    @media (min-width: 840px) {
+        @mixin-content;
     }
 }

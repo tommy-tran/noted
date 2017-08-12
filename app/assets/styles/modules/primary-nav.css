@@ -1,25 +1,43 @@
 .primary-nav {
     position: absolute;
     top: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     text-align: center;
 
+    @mixin Medium {
+        width: 75%;
+    }
+
+    @mixin Large {
+        width: 90%;
+    }
+
     ul {
         margin: 1.15em 0;
         padding: 0 0;
+
+        @mixin Medium {
+            display: flex;
+        }
     }
 
     li {
         display: inline;
         list-style: none;
+
+        @mixin Medium {
+            flex-grow: 1;
+        }
     }
 
     a {
         text-decoration: none;
 
-        @mixin Large {
+        @mixin Medium {
             margin: 0 0.75%;
+            flex-grow: 1;
         }
     }
 }
