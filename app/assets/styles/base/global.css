@@ -15,4 +15,5 @@ body, html {
     -o-background-size: cover;
     background-size: cover;
     font-family: 'Raleway', sans-serif;
+    user-select: none;
 }

@@ -73,7 +73,7 @@
                 Remember me
               </label>
             </div>
-            <div class="modal__extra-forgot"><a class="modal__extra--pullright ">Forgot Username/Password?</a></div>
+            <div class="modal__extra-forgot-container"><a class="modal__extra-forgot modal__extra--pullright ">Forgot Username/Password?</a></div>
           </div>
           <input class="button login-submit" type="submit">
         </div>
