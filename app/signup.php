@@ -52,4 +52,35 @@
         $resultMessage = '<div class="modal-errormsg">' . $errors . '</div>';
         echo $resultMessage;
     }
+
+    $username = mysqli_real_escape_string($link, $username);
+    $email = mysqli_real_escape_string($link, $email);
+    $password = mysqli_real_escape_string($link, $password);
+
+    // Check if username exists
+    $sql = "SELECT * FROM 'users' WHERE username = $username";
+    $result = mysqli_query($link, $sql);
+    if (!$result) {
+        echo '<div class="modal-errormsg">Error running the query</div>';
+    }
+
+    $results = mysqli_num_rows($result);
+
+    if ($results) {
+        echo '<div class="modal-errormsg">That username is already registered.</div>'; exit;
+    }
+
+    // Check if email exists
+    $sql = "SELECT * FROM 'users' WHERE email = $email";
+    $result = mysqli_query($link, $sql);
+    if (!$result) {
+        echo '<div class="modal-errormsg">Error running the query</div>';
+    }
+
+    $results = mysqli_num_rows($result);
+
+    if ($results) {
+        echo '<div class="modal-errormsg">That email is already registered.</div>'; exit;
+    }
+
 ?>
