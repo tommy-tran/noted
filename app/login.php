@@ -52,7 +52,24 @@
                 // If remember me is not checked
                 echo "success";
             } else {
+                // Authentificators (random values for authentification)
+                $authentificator1 = bin2hex(openssl_random_pseudo_bytes(10)); // Hex
+                $authentificator2 = openssl_random_pseudo_bytes(20); // Binary
 
+                // 
+                function combiner($a, $b) {
+                    $value = $a . "," . bin2hex($b);
+                    return $value;
+                }
+
+                $cookieValue = combiner($authentificator1, $authentificator2);
+                
+                // Store as a cookie
+                setcookie(
+                    "rememberme",
+                    $cookieValue,
+                    time() + 1200000
+                );
             }
         }
     }
