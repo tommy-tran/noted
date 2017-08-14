@@ -56,31 +56,55 @@
     $username = mysqli_real_escape_string($link, $username);
     $email = mysqli_real_escape_string($link, $email);
     $password = mysqli_real_escape_string($link, $password);
+    $password = md5($password); // 128 bits --> 32 chars
 
     // Check if username exists
-    $sql = "SELECT * FROM 'users' WHERE username = $username";
+    $sql = "SELECT * FROM users WHERE username = '$username'";
     $result = mysqli_query($link, $sql);
     if (!$result) {
         echo '<div class="modal-errormsg">Error running the query</div>';
+        // echo '<div class="modal-errormsg">' . mysqli_error($link) . '</div>'; 
     }
 
     $results = mysqli_num_rows($result);
 
     if ($results) {
-        echo '<div class="modal-errormsg">That username is already registered.</div>'; exit;
+        echo '<div class="modal-errormsg">That username is already registered.</div>'; 
+        echo '<div class="modal-errormsg">' . mysqli_error($link) . '</div>'; 
+        exit;
     }
 
     // Check if email exists
-    $sql = "SELECT * FROM 'users' WHERE email = $email";
+    $sql = "SELECT * FROM users WHERE email = '$email'";
     $result = mysqli_query($link, $sql);
     if (!$result) {
         echo '<div class="modal-errormsg">Error running the query</div>';
+        echo '<div class="modal-errormsg">' . mysqli_error($link) . '</div>';
+        exit;
     }
-
     $results = mysqli_num_rows($result);
 
     if ($results) {
         echo '<div class="modal-errormsg">That email is already registered.</div>'; exit;
     }
+
+    // Create a unique activation code
+    $activationKey = bin2hex(openssl_random_pseudo_bytes(16));
+
+    // Insert user details and activation code in the users table
+    $sql = "INSERT INTO users (`username`, `email`, `password`, `activation`) VALUES ('$username', '$email', '$password', '$activationkey')";
+    $result = mysqli_query($link, $sql);
+
+    if (!$result) {
+        echo '<div class="modal-errormsg">There was an error inserting user details into the database!</div>';
+        exit;
+    }
+
+    // Activation email
+    $message = "Please click on this link to activate your account:\n\n" . "https://noted.000webhostapp.com/activate.phpemail=" . urlencode($email) . "&key=$activationKey";
+    if (mail($email, 'Confirm your registration!', $message, 'From:'.'trant28@mcmaster.ca')) {
+        echo "<div class='modal-successmsg'>Thank you for registering: A confirmation email has been sent to $email. Please click on the activation link to activate your account.</div>";
+    }
+
 
 ?>
