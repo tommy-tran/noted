@@ -37,11 +37,7 @@
       <div class="message message--hidden">
         <div class="message-container">
           <div class="message-header"></div>
-          <div class="message-signup">
-          </div>
-          <div class="message-login">
-          </div>
-          <div class="message-forgot"></div>
+          <div class="message-content"></div>
         </div>
         <button class="button message-close">OK</button>
       </div>

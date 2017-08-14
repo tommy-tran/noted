@@ -11,12 +11,12 @@ $("#signupform").submit(function(e) {
         success: function(data) {
             if (data) {
                 $(".message").removeClass("message--hidden");
-                $(".message-signup").html(data);
+                $(".message-content").html(data);
             }
         },
         error: function(data) {
             $(".message").removeClass("message--hidden");
-            $(".message-signup").html("<div class='message-signup'>There was an error with the Ajax Call. Please try again later.</div>");
+            $(".message-content").html("<div class='message-content'>There was an error with the Ajax Call. Please try again later.</div>");
         }
     });
 });

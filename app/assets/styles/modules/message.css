@@ -33,7 +33,7 @@
     }
 
     @mixin Large {
-        width: 60%;
+        width: 40%;
     }
 
     &--hidden {
