@@ -22,8 +22,8 @@
     if (empty($_POST["signup-email"])) {
         $errors .= $missingEmail;
     } else {
-        $email = filter_var($POST["signup-email"], FILTER_SANITIZE_EMAIL);
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $email = filter_var($_POST["signup-email"], FILTER_SANITIZE_EMAIL);
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $errors .= $invalidEmail;
         }
     }
@@ -49,8 +49,9 @@
     }
 
     if ($errors) {
-        $resultMessage = '<div class="modal-errormsg">' . $errors . '</div>';
+        $resultMessage = '<div class="message-signup">' . $errors . '</div>';
         echo $resultMessage;
+        exit;
     }
 
     $username = mysqli_real_escape_string($link, $username);
@@ -62,15 +63,15 @@
     $sql = "SELECT * FROM users WHERE username = '$username'";
     $result = mysqli_query($link, $sql);
     if (!$result) {
-        echo '<div class="modal-errormsg">Error running the query</div>';
+        echo '<div class="message-error">Error running the query</div>';
         // echo '<div class="modal-errormsg">' . mysqli_error($link) . '</div>'; 
     }
 
     $results = mysqli_num_rows($result);
 
     if ($results) {
-        echo '<div class="modal-errormsg">That username is already registered.</div>'; 
-        echo '<div class="modal-errormsg">' . mysqli_error($link) . '</div>'; 
+        echo '<div class="message-error">That username is already registered.</div>'; 
+        // echo '<div class="message-signup">' . mysqli_error($link) . '</div>'; 
         exit;
     }
 
@@ -78,14 +79,15 @@
     $sql = "SELECT * FROM users WHERE email = '$email'";
     $result = mysqli_query($link, $sql);
     if (!$result) {
-        echo '<div class="modal-errormsg">Error running the query</div>';
-        echo '<div class="modal-errormsg">' . mysqli_error($link) . '</div>';
+        echo '<div class="message-signup">Error running the query</div>';
+        // echo '<div class="modal-errormsg">' . mysqli_error($link) . '</div>';
         exit;
     }
     $results = mysqli_num_rows($result);
 
     if ($results) {
-        echo '<div class="modal-errormsg">That email is already registered.</div>'; exit;
+        // echo '<div class="message-error">' . mysqli_error($link) . '</div>';
+        echo "<div class='message-signup'>The email $email is already registered.</div>"; exit;
     }
 
     // Create a unique activation code
@@ -96,14 +98,14 @@
     $result = mysqli_query($link, $sql);
 
     if (!$result) {
-        echo '<div class="modal-errormsg">There was an error inserting user details into the database!</div>';
+        echo '<div class="message-signup">There was an error inserting user details into the database!</div>';
         exit;
     }
 
     // Activation email
-    $message = "Please click on this link to activate your account:\n\n" . "https://noted.000webhostapp.com/activate.phpemail=" . urlencode($email) . "&key=$activationKey";
-    if (mail($email, 'Confirm your registration!', $message, 'From:'.'trant28@mcmaster.ca')) {
-        echo "<div class='modal-successmsg'>Thank you for registering: A confirmation email has been sent to $email. Please click on the activation link to activate your account.</div>";
+    $message = "Please click on this link to activate your account:\n\n" . "https://noted.000webhostapp.com/activate.php?email=" . urlencode($email) . "&key=$activationKey";
+    if (mail($email, 'Confirm your registration!', $message, 'From:'.'Noted admin')) {
+        echo "<div class='message-signup'>Thank you for registering: A confirmation email has been sent to $email. Please click on the activation link to activate your account.</div>";
     }
 
 
