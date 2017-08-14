@@ -30,7 +30,11 @@ $("#loginform").submit(function(e) {
         data: datatopost,
         success: function(data) {
             if (data=="success") {
-                window.location = "main.php";
+                $(".message").removeClass("message--hidden");
+                $(".message-content").html("Login Successful!");
+                setInterval(function() {
+                    window.location = "main.php";
+                }, 600);
             } else {
                 $(".message").removeClass("message--hidden");
                 $(".message-content").html(data);

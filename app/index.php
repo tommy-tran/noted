@@ -60,7 +60,7 @@
         <div class="modal__header">Log in</div>
         <div class="modal__content">
 
-          <input type="text" class="modal__content-input" id="login-username"name="login-username" placeholder="Username">
+          <input type="text" class="modal__content-input" id="login-email"name="login-email" placeholder="Email">
           <input type="password" class="modal__content-input" id="login-password" name="login-password" placeholder="Password">
           <div class="modal__extra">
             <div class="modal__extra-rememberme">
