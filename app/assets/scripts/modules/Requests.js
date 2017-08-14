@@ -20,3 +20,25 @@ $("#signupform").submit(function(e) {
         }
     });
 });
+
+$("#loginform").submit(function(e) {
+    e.preventDefault();
+    var datatopost = $(this).serializeArray();
+    $.ajax({
+        url: "login.php",
+        type: "POST",
+        data: datatopost,
+        success: function(data) {
+            if (data=="success") {
+                window.location = "main.php";
+            } else {
+                $(".message").removeClass("message--hidden");
+                $(".message-content").html(data);
+            }
+        },
+        error: function(data) {
+            $(".message").removeClass("message--hidden");
+            $(".message-content").html("<div class='message-content'>There was an error with the Ajax Call. Please try again later.</div>");
+        }
+    });
+});

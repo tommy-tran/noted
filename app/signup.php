@@ -104,8 +104,8 @@
 
     // Activation email
     $message = "Please click on this link to activate your account:\n\n" . "https://noted.000webhostapp.com/activate.php?email=" . urlencode($email) . "&key=$activationKey";
-    if (mail($email, 'Confirm your registration!', $message, 'From:'.'Noted admin')) {
-        echo "<div class='message-content'>Thank you for registering: A confirmation email has been sent to $email. Please click on the activation link to activate your account.</div>";
+    if (mail($email, 'Confirm your registration!', $message, 'From:'.'NOTED')) {
+        echo "<div class='message-content'><p>Thank you for registering</p>A confirmation email has been sent to $email. Please click on the activation link to activate your account.</div>";
     }
 
 

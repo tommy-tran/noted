@@ -55,7 +55,7 @@
       </form>
 
     <!--Login-->
-      <form method="post" class="modal modal-login modal-login--hidden">
+      <form method="post" id="loginform" class="modal modal-login modal-login--hidden">
         <div class="modal__close">X</div>
         <div class="modal__header">Log in</div>
         <div class="modal__content">
