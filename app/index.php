@@ -1,3 +1,9 @@
+<?php
+session_start();
+include('connection.php');
+include('remember.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
