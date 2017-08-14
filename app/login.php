@@ -43,6 +43,7 @@
         if ($count !== 1) {
             echo '<div class="message-error">Wrong email or password</div>';
         } else {
+            // Set session variables
             $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
             $_SESSION['user_id']=$row['user_id'];
             $_SESSION['username']=$row['username'];
@@ -56,7 +57,6 @@
                 $authentificator1 = bin2hex(openssl_random_pseudo_bytes(10)); // Hex
                 $authentificator2 = openssl_random_pseudo_bytes(20); // Binary
 
-                // 
                 function combiner($a, $b) {
                     $value = $a . "," . bin2hex($b);
                     return $value;
@@ -68,8 +68,31 @@
                 setcookie(
                     "rememberme",
                     $cookieValue,
-                    time() + 1200000
+                    time() + 1296000 
                 );
+
+                function reverser($x) {
+                    $value = hash('sha256', $x);
+                    return $value;
+                }
+
+                $f2authentificator2 = reverser($authentificator2);
+                $user_id = $_SESSION['user_id'];
+                $expires = date('Y-m-d H:i:s', time() + 1296000);
+                
+                $sql = "INSERT INTO rememberme 
+                (`authentificator1`, `f2authentificator2`, `user_id`, `expires`)
+                VALUES 
+                ('$authentificator1', '$f2authentificator2', '$user_id', '$expires')";
+                
+                $result = mysqli_query($link, $sql);
+
+                if (!$result) {
+                    $output = mysqli_error($link);
+                    echo $output;
+                } else {
+                    echo 'success';
+                }
             }
         }
     }

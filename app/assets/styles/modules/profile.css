@@ -22,7 +22,7 @@
         margin-right: auto;
         font-size: 1.7em;
 
-        @mixin Large {
+        @mixin Medium {
             font-size: 2em;
         }
         
@@ -57,7 +57,7 @@
                 padding: 10px 10px;
                 border-radius: 10px;
 
-                @mixin Large {
+                @mixin Medium {
                     padding: 20px 40px;
                 }
             }
@@ -70,7 +70,7 @@
         text-shadow: black 1px 0 10px;
         margin: 0px 0px;
         
-        @mixin Large {
+        @mixin Medium {
             font-size: 5em;
             margin-bottom: 40px;
         }
