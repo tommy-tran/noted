@@ -44,5 +44,16 @@
     $sql = "INSERT INTO forgotpassword (`user_id`, `key`, `time`, `status`) VALUES ('$user_id', '$key', '$time', '$status')";
     
     $result = mysqli_query($link, $sql);
+
+    if (!$result) {
+        echo '<div class="message-content">There was an error inserting user details into the database!</div>';
+        exit;
+    }
+
+    // Activation email
+    $message = "Please click on this link to reset your password:\n\n" . "https://noted.000webhostapp.com/resetpassword.php?user_id=$user_id&key=$key";
+    if (mail($email, 'Reset password', $message, 'From:'.'NOTED')) {
+        echo "<div class='message-content'><p>An email has been sent to $email. Please click on the link to reset your password.</div>";
+    }
     
 ?>
