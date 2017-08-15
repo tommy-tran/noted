@@ -22,7 +22,7 @@
         margin-right: auto;
         color: black;
         font-size: 24px;
-        padding: 20px 0;
+        padding: 0 0;
         text-shadow: none;
         justify-content: center;
         background-color: transparent;
@@ -34,6 +34,19 @@
 
     @mixin Large {
         width: 40%;
+    }
+
+    &-alert {
+        width: 200px;
+        height: 100px;
+        display: block;
+        position: absolute;
+        top: 40%;
+        left: 0;
+        right: 0;
+        margin: auto auto;
+        font-size: 36px;
+        z-index: 20;
     }
 
     &--hidden {

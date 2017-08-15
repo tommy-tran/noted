@@ -1,5 +1,6 @@
 <?php
-if (!isset($_SESSION['user_id']) && !empty($_COOKIE['rememberme'])) {
+session_start();
+if (!empty($_COOKIE['rememberme'])) {
     // Extract authentificators from cookie
     list($authentificator1,$authentificator2) = explode(',', $_COOKIE['rememberme']);
     $authentificator2 = hex2bin($authentificator2);
@@ -7,7 +8,7 @@ if (!isset($_SESSION['user_id']) && !empty($_COOKIE['rememberme'])) {
 
     $sql = "SELECT * FROM rememberme where authentificator1 = '$authentificator1'";
     $result = mysqli_query($link, $sql);
-
+    header("location:main.php");
     if (!$result) {
         echo mysqli_error($link);
         exit;
@@ -15,14 +16,60 @@ if (!isset($_SESSION['user_id']) && !empty($_COOKIE['rememberme'])) {
 
     $count = mysqli_num_rows($result);
     if ($count !== 1) {
-        echo 'Remember me process failed!';
+        echo "<div class='message-alert'>Remember me process failed!</div>";
         exit;
     }
 
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     
-    if (hash_equals($row['f2authentificator2'], $f2authentificator2)) {
+    if (!hash_equals($row['f2authentificator2'], $f2authentificator2)) {
+        echo "<div class='message-alert'>hash_equals returns false</div>";
+    } else {
+        // Generate new authentificators
+        $authentificator1 = bin2hex(openssl_random_pseudo_bytes(10)); // Hex
+        $authentificator2 = openssl_random_pseudo_bytes(20); // Binary
+
+        function combiner($a, $b) {
+            $value = $a . "," . bin2hex($b);
+            return $value;
+        }
+
+        $cookieValue = combiner($authentificator1, $authentificator2);
+        
+        // Store as a cookie
+        setcookie(
+            "rememberme",
+            $cookieValue,
+            time() + 1296000 
+        );
+
+        function reverser($x) {
+            $value = hash('sha256', $x);
+            return $value;
+        }
+
+        $f2authentificator2 = reverser($authentificator2);
+        $user_id = $_SESSION['user_id'];
+        $expires = date('Y-m-d H:i:s', time() + 1296000);
+        
+        $sql = "INSERT INTO rememberme 
+        (`authentificator1`, `f2authentificator2`, `user_id`, `expires`)
+        VALUES 
+        ('$authentificator1', '$f2authentificator2', '$user_id', '$expires')";
+        
+        $result = mysqli_query($link, $sql);
+
+        if (!$result) {
+            $output = mysqli_error($link);
+            echo $output;
+        }
+
+        // Log the user in and redirect to notes page
         $_SESSION['user_id'] = $row['user_id'];
+        header("location:main.php");
     }
+} 
+else {
+    echo "<div class='message-alert'>" . $_SESSION['user_id'] . "</div>";
 }
 ?>
