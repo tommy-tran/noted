@@ -16,15 +16,12 @@ if (!empty($_COOKIE['rememberme'])){
 
     $count = mysqli_num_rows($result);
     if ($count !== 1) {
-        echo "<div class='message-alert'>Remember me process failed!</div>";
-        exit;
+        // echo "<div class='message-alert'>Remember me process failed!</div>";
     }
 
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     
-    if (!hash_equals($row['f2authentificator2'], $f2authentificator2)) {
-        echo "<div class='message-alert'>hash_equals returns false</div>";
-    } else {
+    if (hash_equals($row['f2authentificator2'], $f2authentificator2)) {
         // Generate new authentificators
         $authentificator1 = bin2hex(openssl_random_pseudo_bytes(10)); // Hex
         $authentificator2 = openssl_random_pseudo_bytes(20); // Binary
