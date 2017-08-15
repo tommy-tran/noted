@@ -1,6 +1,7 @@
 <?php
-session_start();
-if(!isset($_SESSION['user_id']) && !empty($_COOKIE['rememberme'])){
+// echo "SESSION ID: " . !isset($_SESSION['user_id']);
+// echo "EMPTY COOKIE: " . !empty($_COOKIE['rememberme']);
+if (!empty($_COOKIE['rememberme'])){
     // Extract authentificators from cookie
     list($authentificator1,$authentificator2) = explode(',', $_COOKIE['rememberme']);
     $authentificator2 = hex2bin($authentificator2);
