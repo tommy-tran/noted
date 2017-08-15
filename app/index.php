@@ -83,7 +83,7 @@ include('remember.php');
       </form>
 
       <!--Forgot information-->
-      <form method="post" class="modal modal-forgot modal-forgot--hidden">
+      <form method="post" id="forgotform" class="modal modal-forgot modal-forgot--hidden">
         <div class="modal__close">X</div>
         <div class="modal__header">Forgot Password?</div>
         <div class="modal__content">
