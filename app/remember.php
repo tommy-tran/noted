@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!empty($_COOKIE['rememberme'])) {
+if(!isset($_SESSION['user_id']) && !empty($_COOKIE['rememberme'])){
     // Extract authentificators from cookie
     list($authentificator1,$authentificator2) = explode(',', $_COOKIE['rememberme']);
     $authentificator2 = hex2bin($authentificator2);
@@ -8,7 +8,6 @@ if (!empty($_COOKIE['rememberme'])) {
 
     $sql = "SELECT * FROM rememberme where authentificator1 = '$authentificator1'";
     $result = mysqli_query($link, $sql);
-    header("location:main.php");
     if (!$result) {
         echo mysqli_error($link);
         exit;
@@ -68,8 +67,5 @@ if (!empty($_COOKIE['rememberme'])) {
         $_SESSION['user_id'] = $row['user_id'];
         header("location:main.php");
     }
-} 
-else {
-    echo "<div class='message-alert'>" . $_SESSION['user_id'] . "</div>";
 }
 ?>
