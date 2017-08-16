@@ -13,7 +13,6 @@
             $errors .= $invalidEmail;
         }
     }
-    echo "REACHED HERE";
 
     if ($errors) {
         $resultMessage = '<div class="message-content">' . $errors . '</div>';

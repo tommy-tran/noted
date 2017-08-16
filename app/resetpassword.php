@@ -45,27 +45,26 @@ include('connection.php');
             }
 
             echo "
-            <div class='modal-container modal-container--hidden'>
-            <form method=post id='passwordreset'>
+            <div class='modal-container'>
+            <form method=post id='passwordreset' class='modal modal-reset'>
+                <div class='modal__header'>Reset Password</div>
                 <input type='hidden' name='key' value=$key>
                 <input type='hidden' name='user_id' value=$user_id>
-                <div class='modal-reset'>
-                    <input class='modal__content-input' type='text' type='password' name='password' id='password' placeholder='Enter new password'>
-                    <input class='modal__content-input' type='text' type='password' name='password2' id='password2' placeholder='Confirm new password'>
-                    <input type='submit' name='resetpassword' class='button' value='Reset Password'>
-                </div>
+                <input class='modal__content-input' type='text' type='password' name='password' id='password' placeholder='Enter new password'>
+                <input class='modal__content-input' type='text' type='password' name='password2' id='password2' placeholder='Confirm new password'>
+                <input type='submit' name='resetpassword' class='modal-reset-button' value='Confirm'>
             </form>
             </div>
             ";
 
 
-            if (mysqli_affected_rows($link) == 1) {
-                echo "<div class='reset-msg'>Your account password has been reset.</div>";
-                echo '<a href="index.php" type="button" class="button">Log in</a>';
-            } else {
-                echo '<div class="reset-msg">Your account password could not be reset. Please try again later.</div>';
-                echo '<div class="reset-msg">' . mysqli_error($link) . '</div>';
-            }
+            // if (mysqli_affected_rows($link) == 1) {
+            //     echo "<div class='reset-msg'>Your account password has been reset.</div>";
+            //     echo '<a href="index.php" type="button" class="button">Log in</a>';
+            // } else {
+            //     echo '<div class="reset-msg">Your account password could not be reset. Please try again later.</div>';
+            //     echo '<div class="reset-msg">' . mysqli_error($link) . '</div>';
+            // }
         ?>
     </div>
     <div class="jumbotron"></div>
@@ -77,23 +76,6 @@ include('connection.php');
         </div>
     </div>
 
-    <script>
-        $("#passwordreset").submit(function(e) {
-            e.preventDefault();
-            var datatopost = $(this).serializeArray();
-            $.ajax({
-                url: "storeresetpassword.php",
-                type: "POST",
-                data: datatopost,
-                success: function(data) {
-                    $('.message-content').html(data);
-                },
-                error: function(data) {
-                    $(".message").removeClass("message--hidden");
-                    $(".message-content").html("<div class='message-content'>There was an error with the Ajax Call. Please try again later.</div>");
-                }
-            });
-        });
-    </script>
+    <script src="/temp/scripts/App.js"></script>
   </body>
 </html>

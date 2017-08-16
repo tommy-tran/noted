@@ -64,3 +64,21 @@ $("#forgotform").submit(function(e) {
         }
     });
 });
+
+$("#passwordreset").submit(function(e) {
+    e.preventDefault();
+    var datatopost = $(this).serializeArray();
+    $.ajax({
+        url: "storeresetpassword.php",
+        type: "POST",
+        data: datatopost,
+        success: function(data) {
+            $('.message-content').html(data);
+            $(".message").removeClass("message--hidden");
+        },
+        error: function(data) {
+            $(".message").removeClass("message--hidden");
+            $(".message-content").html("<div class='message-content'>There was an error with the Ajax Call. Please try again later.</div>");
+        }
+    });
+});

@@ -40,6 +40,24 @@
         }
     }
 
+    &-reset {
+        height: 260px;
+        width: 400px;
+
+        &-button {
+            font-family: 'Roboto';
+            font-size: 1.2em;
+            width: 100px;
+            height: 55px;
+            border-radius: 20px;
+            margin-top: 5px;
+        }
+
+        .modal__content-input {
+            width: 320px;
+        }
+    }
+
     &-forgot {
         top: 30%;
         bottom: 30%;
@@ -48,8 +66,10 @@
         border-radius: 30px;
 
         @mixin Medium {
-            height: 220px;
-            width: 400px;
+            height: 260px;
+            width: 420px;
+
+
         }
 
 
