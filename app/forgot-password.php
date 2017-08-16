@@ -3,7 +3,7 @@
     include('connection.php');
 
     $missingEmail='<p><strong>Please enter your email address!</strong></p>';
-    $invalidEmail='<p><strong>Please enter a valid email address</strong></p>';
+    $invalidEmail='<p><strong>This is an invalid email address.</strong></p>';
 
     if (empty($_POST["forgot-email"])) {
         $errors .= $missingEmail;
