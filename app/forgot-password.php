@@ -13,6 +13,7 @@
             $errors .= $invalidEmail;
         }
     }
+    echo "REACHED HERE";
 
     if ($errors) {
         $resultMessage = '<div class="message-content">' . $errors . '</div>';
@@ -41,7 +42,7 @@
     $key = bin2hex(openssl_random_pseudo_bytes(16));
     $time = time();
     $status = 'pending';
-    $sql = "INSERT INTO forgotpassword (`user_id`, `key`, `time`, `status`) VALUES ('$user_id', '$key', '$time', '$status')";
+    $sql = "INSERT INTO forgotpassword (`user_id`, `resetkey`, `time`, `status`) VALUES ('$user_id', '$key', '$time', '$status')";
     
     $result = mysqli_query($link, $sql);
 

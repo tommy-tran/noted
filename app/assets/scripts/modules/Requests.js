@@ -55,6 +55,7 @@ $("#forgotform").submit(function(e) {
         type: "POST",
         data: datatopost,
         success: function(data) {
+            $(".message").removeClass("message--hidden");
             $('.message-content').html(data);
         },
         error: function(data) {
