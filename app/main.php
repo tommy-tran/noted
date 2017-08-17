@@ -30,7 +30,7 @@ if(!isset($_SESSION['user_id'])) {
               <a href="#"><li class="header-link">Contact</li></a>
               <li class="header-logout header-link logout-btn"><a href="index.php?logout=1">Logout</a></li>
             </ul>
-            <div class="header-userinfo">Logged in as username</div>
+            <div class="header-userinfo">Logged in as <b><?php echo $_SESSION['username']?></b></div>
           </nav>
         </div>
 
