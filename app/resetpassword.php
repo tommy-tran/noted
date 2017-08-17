@@ -30,7 +30,7 @@ include('connection.php');
             $user_id = mysqli_real_escape_string($link, $user_id);
             $key = mysqli_real_escape_string($link, $key);
 
-            $sql = "SELECT user_id FROM forgotpassword WHERE resetkey='$key' AND user_id='$user_id' AND time > '$time'";
+            $sql = "SELECT user_id FROM forgotpassword WHERE resetkey='$key' AND user_id='$user_id' AND time > '$time' AND status='pending'";
             $result = mysqli_query($link, $sql);
 
             if (!$result) {
@@ -46,14 +46,20 @@ include('connection.php');
 
             echo "
             <div class='modal-container'>
-            <form method=post id='passwordreset' class='modal modal-reset'>
-                <div class='modal__header'>Reset Password</div>
-                <input type='hidden' name='key' value=$key>
-                <input type='hidden' name='user_id' value=$user_id>
-                <input class='modal__content-input' type='text' type='password' name='password' id='password' placeholder='Enter new password'>
-                <input class='modal__content-input' type='text' type='password' name='password2' id='password2' placeholder='Confirm new password'>
-                <input type='submit' name='resetpassword' class='modal-reset-button' value='Confirm'>
-            </form>
+                <form method='post' id='passwordreset' class='modal modal-reset'>
+                    <div class='modal__header'>Reset Password</div>
+                    <input type='hidden' name='key' value=$key>
+                    <input type='hidden' name='user_id' value=$user_id>
+                    <input class='modal__content-input' type='password' type='password' name='password' id='password' placeholder='Enter new password'>
+                    <input class='modal__content-input' type='password' type='password' name='password-confirm' id='password-confirm' placeholder='Confirm new password'>
+                    <input type='submit' name='resetpassword' class='modal-reset-button' value='Confirm'>
+                </form>
+                <div class='message message--hidden'>
+                    <div class='message-container'>
+                        <div class='message-header'></div>
+                        <div class='message-content'></div>
+                    </div>
+                </div>
             </div>
             ";
 
@@ -69,12 +75,7 @@ include('connection.php');
     </div>
     <div class="jumbotron"></div>
     
-    <div class="message message--hidden">
-        <div class="message-container">
-            <div class="message-header"></div>
-            <div class="message-content"></div>
-        </div>
-    </div>
+
 
     <script src="/temp/scripts/App.js"></script>
   </body>

@@ -30,7 +30,7 @@
 
     &-login {
         @mixin Medium {
-            height: 310px;
+            height: 290px;
             width: 480px;
         }
         
@@ -66,10 +66,8 @@
         border-radius: 30px;
 
         @mixin Medium {
-            height: 260px;
+            height: 220px;
             width: 420px;
-
-
         }
 
 

@@ -41,7 +41,7 @@
         $count = mysqli_num_rows($result);
 
         if ($count !== 1) {
-            echo '<div class="message-error">Wrong email or password</div>';
+            echo '<div class="message-error"><p>Wrong email or password</p></div>';
         } else {
             // Set session variables
             $row = mysqli_fetch_array($result, MYSQLI_ASSOC);

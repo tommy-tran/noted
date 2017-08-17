@@ -3,7 +3,7 @@
     flex-direction: column;
     background-color: rgba(0,0,0,0.9);
     position: absolute;
-    z-index: 11;
+    z-index: 15;
     top: 0;
     left: 0;
     right: 0;
@@ -22,7 +22,7 @@
         margin-right: auto;
         color: black;
         font-size: 24px;
-        padding: 0 0;
+        padding: 0 20px;
         text-shadow: none;
         justify-content: center;
         background-color: transparent;
@@ -34,6 +34,20 @@
 
     @mixin Large {
         width: 40%;
+    }
+
+    &-content {
+        margin-bottom: 20px;
+    }
+
+    &-link {
+        z-index: 9999999;
+        font-family: 'Roboto';
+        font-size: 1.6em;
+        border-radius: 10px;
+        color: darkslategray;
+        text-decoration: none;
+        text-shadow: 1px 1px 1px black; 
     }
 
     &-alert {
