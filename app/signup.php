@@ -65,6 +65,7 @@
     $result = mysqli_query($link, $sql);
     if (!$result) {
         echo '<div class="message-error">Error running the query</div>';
+        // echo '<div class="modal-errormsg">' . mysqli_error($link) . '</div>'; 
     }
 
     $results = mysqli_num_rows($result);

@@ -1,5 +1,22 @@
 import $ from 'jquery';
 
+
+$(function(){
+  if($('body').is('.main')){
+        console.log("HELLO");
+        $.ajax({
+            url: "loadnotes.php",
+            success: function(data) {
+                console.log("Success: Loaded Notes!");
+                $(".notes__list").html(data);
+            },
+            error: function(data) {
+                console.log(data);
+            }
+        });
+  }
+});
+
 $("#signupform").submit(function(e) {
     e.preventDefault();
     var datatopost = $(this).serializeArray();
@@ -31,7 +48,7 @@ $("#loginform").submit(function(e) {
         success: function(data) {
             if (data=="success") {
                 $(".message").removeClass("message--hidden");
-                $(".message-content").html("<p>Login Successful!</p>");
+                $(".message-content").html("Login Successful!");
                 setInterval(function() {
                     window.location = "main.php";
                 }, 600);
@@ -82,3 +99,4 @@ $("#passwordreset").submit(function(e) {
         }
     });
 });
+

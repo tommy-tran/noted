@@ -63,6 +63,11 @@ if(!isset($_SESSION['user_id'])) {
       <p>Created by Tommy Tran</p>
     </div>
 
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src="/assets/scripts/modules/Notes.js"></script>
     <script src="/temp/scripts/App.js"></script>
   </body>
 </html>

@@ -145,7 +145,37 @@
     }
 
     &__list {
-        display: none;
-        background-color: gray;
+        @mixin Medium {
+            margin-top: 24px;
+            margin-bottom: 20px;
+        }
+
+
+        &--hide {
+            display: none;
+        }
+    }
+
+    &__item {
+        padding: 20px 0px;
+        font-size: 1.25em;
+        border: 1px solid black;
+        border-radius: 15px 15px 15px 15px;
+
+        &:first-child {
+            border-radius: 30px 30px 15px 15px;
+        }
+
+        &:last-child {
+            border-radius: 15px 15px 30px 30px;
+        }
+
+        &-title {
+            margin: 5px 10px;
+        }
+
+        &-date {
+            margin: 5px 10px;
+        }
     }
 }

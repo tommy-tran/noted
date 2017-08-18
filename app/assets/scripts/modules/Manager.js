@@ -10,6 +10,7 @@ class Manager {
         this.addBtn = $(".notes__button-add");
         this.notepad = $(".notes__notepad");
         this.notepadtext = $("#notepad");
+        this.noteList = $(".notes__list");
         this.events();
     }
 
@@ -34,6 +35,7 @@ class Manager {
         this.edit.addClass("notes--hidden");
         this.add.addClass("notes--hidden");
         this.notepad.addClass("notes__notepad--hide");
+        this.noteList.removeClass("notes__list--hide");
     }
 
     openEdit() {
@@ -47,6 +49,7 @@ class Manager {
         this.edit.addClass("notes--hidden");
         this.add.removeClass("notes--hidden");
         this.notepad.removeClass("notes__notepad--hide");
+        this.noteList.addClass("notes__list--hide");
     }
     
 }
