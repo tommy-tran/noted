@@ -39,10 +39,17 @@ if(!isset($_SESSION['user_id'])) {
           <div class="header__menu-icon__middle"></div>
         </div>
     </header>
+
+    <div class='message message--hidden'>
+        <div class='message-container'>
+            <div class="message-close">OK</div>
+            <div class='message-content'></div>
+        </div>
+    </div>
     
     <div class="notes">
       <div class="notes__extra-container notes__extra-main">
-        <div class="notes__button-container"><button class="notes__button notes__button-blue notes__button-add">Add Note</button></div>
+        <div class="notes__button-container"><button id="addnote" class="notes__button notes__button-blue notes__button-add">Add Note</button></div>
         <div class="notes__button-container notes__button--pull-right"><button class="notes__button notes__button-red notes__button-edit">Edit</button></div>
       </div>
       <div class="notes__extra-container notes__extra-edit notes--hidden">

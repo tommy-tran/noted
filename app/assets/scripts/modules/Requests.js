@@ -1,21 +1,7 @@
 import $ from 'jquery';
 
-
-$(function(){
-  if($('body').is('.main')){
-        console.log("HELLO");
-        $.ajax({
-            url: "loadnotes.php",
-            success: function(data) {
-                console.log("Success: Loaded Notes!");
-                $(".notes__list").html(data);
-            },
-            error: function(data) {
-                console.log(data);
-            }
-        });
-  }
-});
+var activeNote = 0;
+var editMode = false;
 
 $("#signupform").submit(function(e) {
     e.preventDefault();
@@ -97,6 +83,22 @@ $("#passwordreset").submit(function(e) {
             $(".message").removeClass("message--hidden");
             $(".message-content").html("<div class='message-content'>There was an error with the Ajax Call. Please try again later.</div>");
         }
+    });
+});
+
+$("#addnote").click(function() {
+    $.ajax({
+        url: "createnote.php",
+        success: function(data) {
+            $(".message").removeClass("message--hidden");
+            if (data == 'error') {
+                $('.message-content').html("<div class='message-content'><p>There was an issue with adding the new note.</p></div>");
+            } else {
+                activeNote = data;
+                $("#notepad").val("");
+                $("#notepad").focus();
+            }
+        } 
     });
 });
 
