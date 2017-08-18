@@ -145,6 +145,9 @@
     }
 
     &__list {
+        display: flex;
+        flex-direction: column;
+
         @mixin Medium {
             margin-top: 24px;
             margin-bottom: 20px;
@@ -161,21 +164,38 @@
         font-size: 1.25em;
         border: 1px solid black;
         border-radius: 15px 15px 15px 15px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        
+        &:hover {
+            cursor: pointer;
+            background: rgba(76, 85, 99,0.5);
+        }
 
         &:first-child {
             border-radius: 30px 30px 15px 15px;
+            margin-bottom: 1px;
         }
 
         &:last-child {
             border-radius: 15px 15px 30px 30px;
+            margin-top: 1px;
         }
 
         &-title {
-            margin: 5px 10px;
+            margin: 0px 10px;
+            font-size: 1.2em;
+            font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         &-date {
             margin: 5px 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 }
