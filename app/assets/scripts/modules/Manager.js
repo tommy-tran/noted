@@ -36,6 +36,18 @@ class Manager {
         this.add.addClass("notes--hidden");
         this.notepad.addClass("notes__notepad--hide");
         this.noteList.removeClass("notes__list--hide");
+        $.ajax({
+            url: "loadnotes.php",
+            success: function(data) {
+                // Clear notepad
+                $("#notepad").val("");
+                console.log("Success: Loaded Notes!");
+                $(".notes__list").html(data);
+            },
+            error: function(data) {
+                console.log(data);
+            }
+        });
     }
 
     openEdit() {

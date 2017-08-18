@@ -98,6 +98,10 @@ $("#addnote").click(function() {
                 $("#notepad").val("");
                 $("#notepad").focus();
             }
+        },
+        error: function(data) {
+            $(".message").removeClass("message--hidden");
+            $('.message-content').html("<div class='message-error'><p>There was an error with the ajax call.</p></div>");
         } 
     });
 });
