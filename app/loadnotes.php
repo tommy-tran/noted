@@ -1,25 +1,37 @@
 <?php
 session_start();
 include('connection.php');
-echo "
-<div class='notes__item'>
-    <div class='notes__item-title'>This is a note</div>
-    <div class='notes__item-date'>August 18, 2017 02:00:00</div>
-</div>
-<div class='notes__item'>
-    <div class='notes__item-title'>This is another note</div>
-    <div class='notes__item-date'>August 14, 2017 02:00:00</div>
-</div>
-<div class='notes__item'>
-    <div class='notes__item-title'>This is the first note. The length of the title is pretty long so I don't really understand what I should do here.</div>
-    <div class='notes__item-date'>August 12, 2017 02:00:00</div>
-</div>
-";
 // Get user_id
-$user_id = $SESSION['user_id'];
+$user_id = $_SESSION['user_id'];
 // Delete empty notes
 $sql = "DELETE FROM notes WHERE note=''";
 $result = mysqli_query($link, $sql);
+
+if (!$result) {
+    echo '<div class="message-error">Error occurred while deleting empty notes</div>';
+    exit;
+}
 // Get notes
+$sql = "SELECT * FROM notes WHERE user_id='$user_id' ORDER BY time DESC";
 // Show notes
+if ($result = mysqli_query($link, $sql)) {
+    if(mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
+            $note_id = $row['id'];
+            $title = $row['title'];
+            $time = $row['time'];
+            $time = date("F d, Y h:i:s A", $time);
+            echo "
+            <div class='notes__item'>
+                <div class='notes__item-title' id='$note_id'>$title</div>
+                <div class='notes__item-date'>$time</div>
+            </div>
+            ";
+        }
+    }
+} else {
+    echo "<div class='message-error'>Error getting notes</div>";
+    exit;
+}
+
 ?>

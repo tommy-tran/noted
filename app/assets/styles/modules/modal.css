@@ -279,7 +279,7 @@
         &--pullleft {
             @mixin Medium {
                 float: left;
-                padding-left: 32px;
+                padding-left: 36px;
                 padding-top: 5px;
                 padding-bottom: 2px;
             }
@@ -292,6 +292,7 @@
                 padding-top: 5px;
                 padding-bottom: 2px;
                 margin: 10px 0px;
+                margin-left: 76px;
             }
             
                 
