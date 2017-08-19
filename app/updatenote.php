@@ -8,7 +8,12 @@ $title = $_POST['title'];
 // Get content
 $note = $_POST['note'];
 // Get time
-$time = time();
+if (isset($_POST['time'])) {
+    $time = $_POST['time'];
+} else {
+    $time = time();
+}
+
 // Update
 $sql = "UPDATE notes SET title='$title', note='$note', time='$time' WHERE id='$id'";
 $result = mysqli_query($link, $sql);

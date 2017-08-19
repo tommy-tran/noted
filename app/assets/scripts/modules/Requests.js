@@ -158,6 +158,51 @@ function updateNote() {
     });
 }
 
+// Cancelling notes
+
+$('.notes__button-cancel').click(function() {
+    cancel();
+});
+
+function cancel() {
+    var active = $('#' + activeNote);
+    var title = active.find('.notes__item-title').text();
+    var note = active.find('.notes__item-note').text();
+    var time = active.find('.notes__item-date--hidden').text();
+
+    if (active.length !== 0) {
+        $.ajax({
+        type: 'POST',
+        url: "updatenote.php",
+        data: {title:title,note:note,id:activeNote, time:time},
+        success: function(data) {
+            if (data == 'error') {
+                console.log("Successfully cancelled note");
+                $('.message-content').html("<div class='message-error'><p>There was an error updating the note into the database.</p></div>");
+            }
+        },
+        error: function(data) {
+            $('.message-content').html("<div class='message-error'><p>" + data + "</p></div>");
+        }
+        });
+    } else {
+        $.ajax({
+        type: 'POST',
+        url: "updatenote.php",
+        data: {title:'',note:'',id: activeNote},
+        success: function(data) {
+            if (data == 'error') {
+                console.log("Successfully cancelled note");
+                $('.message-content').html("<div class='message-error'><p>There was an error updating the note into the database.</p></div>");
+            }
+        },
+        error: function(data) {
+            $('.message-content').html("<div class='message-error'><p>" + data + "</p></div>");
+        }
+    });
+    }
+}
+
 // Opening specific notes
 
 

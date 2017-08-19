@@ -20,13 +20,14 @@ if ($result = mysqli_query($link, $sql)) {
             $note_id = $row['id'];
             $title = $row['title'];
             $note = $row['note'];
-            $time = $row['time'];
-            $time = date("F d, Y h:i:s A", $time);
+            $oldtime = $row['time'];
+            $time = date("F d, Y h:i:s A", $oldtime);
             echo "
             <div class='notes__item' id='$note_id'>
                 <div class='notes__item-title'>$title</div>
                 <div class='notes__item-date'>$time</div>
                 <div class='notes__item-note'>$note</div>
+                <div class='notes__item-date--hidden'>$oldtime</div>
             </div>
             ";
         }

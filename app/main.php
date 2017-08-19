@@ -64,7 +64,7 @@ if(!isset($_SESSION['user_id'])) {
       <div class="notes__list">
         <div class='notes__item' id='$note_id'>
           <div class='notes__item-title'>Loading</div>
-          <div class='notes__item-date'>Loading</div>
+          <div class='notes__item-date'></div>
           <div class='notes__item-note'></div>
         </div>
       </div>
