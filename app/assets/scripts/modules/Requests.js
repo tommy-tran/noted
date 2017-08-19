@@ -90,8 +90,8 @@ $("#addnote").click(function() {
     $.ajax({
         url: "createnote.php",
         success: function(data) {
-            $(".message").removeClass("message--hidden");
             if (data == 'error') {
+                $(".message").removeClass("message--hidden");
                 $('.message-content').html("<div class='message-content'><p>There was an issue with adding the new note.</p></div>");
             } else {
                 activeNote = data;
@@ -124,6 +124,19 @@ $("#title").keyup(function() {
     });
 });
 
+// Update note on content change
+$("#notepad").keyup(function() {
+    updateNote()
+});
+
+// Update note on title change
+$("#title").keyup(function() {
+    updateNote()
+});
+
+// Update note on clicking save button
+$(".notes__button-save").click(updateNote());
+
 function updateNote() {
     var title = $("#title").text();
     if (title == "") {
@@ -145,13 +158,8 @@ function updateNote() {
     });
 }
 
-$("#notepad").keyup(function() {
-    updateNote()
-});
-$("#title").keyup(function() {
-    updateNote()
-});
-$(".notes__button-save").click(updateNote());
+// Opening specific notes
+
 
 setInterval(function() {
     $(".notes__item").click(function() {
@@ -163,9 +171,11 @@ setInterval(function() {
         add.removeClass("notes--hidden");
         var noteList = $(".notes__list");
         noteList.addClass("notes__list--hide");
-        var activeNote = $(this).attr("id");
+        activeNote = $(this).attr("id");
+        console.log("Opening note: " + activeNote);
         $("#notepad").val($(this).find('.notes__item-note').text());
+        $("#title").text($(this).find('.notes__item-title').text());
         $(".notes__notepad").removeClass("notes__notepad--hide");
     });    
-}, 100);
+}, 250);
 

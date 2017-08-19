@@ -38,8 +38,6 @@ include('remember.php');
         </div>
     </header>
 
-    
-
     <div class="modal-container modal-container--hidden">
       <div class="message message--hidden">
         <div class="message-container">

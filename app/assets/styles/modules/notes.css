@@ -8,6 +8,8 @@
     flex-direction: column;
     margin: auto auto;
     background-color: rgba(255, 255, 255, 0.85);
+    overflow-y: hidden;
+    border-radius: 20px;
     
     @mixin Medium {
         padding: 30px 40px;
@@ -161,6 +163,8 @@
     &__list {
         display: flex;
         flex-direction: column;
+        overflow-y: scroll;
+        height: 572px;
 
         @mixin Medium {
             margin-top: 24px;
@@ -180,7 +184,6 @@
         border-radius: 15px 15px 15px 15px;
         margin-top: 1px;
         margin-bottom: 1px;
-        z-index: 32;
         
         &:hover {
             cursor: pointer;
