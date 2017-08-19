@@ -10,8 +10,8 @@
     border-bottom: solid gray 1px;
 
     &-userinfo {
-        font-size: 0.8em;
-        color: darkslategray;
+        color: black;
+        text-shadow: 1px 1px 1px white;
 
         @mixin Medium {
             float: right;
@@ -30,6 +30,11 @@
         font-weight: 800;
         margin: 0 0;
         font-size: 1.3em;
+
+        a {
+            color: black;
+        }
+
         &--hidden {
             opacity: 0;
         }

@@ -20,6 +20,12 @@ if (!empty($_COOKIE['rememberme'])){
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     
     if (hash_equals($row['f2authentificator2'], $f2authentificator2)) {
+        // Passed auth2
+        // Set session variables
+        $_SESSION['user_id']=$row['user_id'];
+        $_SESSION['username']=$row['username'];
+
+
         // Generate new authentificators
         $authentificator1 = bin2hex(openssl_random_pseudo_bytes(10)); // Hex
         $authentificator2 = openssl_random_pseudo_bytes(20); // Binary
@@ -43,6 +49,8 @@ if (!empty($_COOKIE['rememberme'])){
             return $value;
         }
 
+
+
         $f2authentificator2 = reverser($authentificator2);
         $user_id = $_SESSION['user_id'];
         $expires = date('Y-m-d H:i:s', time() + 1296000);
@@ -60,7 +68,6 @@ if (!empty($_COOKIE['rememberme'])){
         }
 
         // Log the user in and redirect to notes page
-        $_SESSION['user_id'] = $row['user_id'];
         header("location:main.php");
     }
 }
