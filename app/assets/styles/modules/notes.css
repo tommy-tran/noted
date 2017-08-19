@@ -101,6 +101,16 @@
             text-align: right;
         }
     }
+    
+    &__title {
+        padding: 10px 10px;
+        flex-grow: 3;
+        font-size: 42px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        outline-color: white;
+    }
 
     &__notepad {
         @mixin Medium {
@@ -144,6 +154,8 @@
         }
     }
 
+
+
     &__list {
         display: flex;
         flex-direction: column;
@@ -160,7 +172,7 @@
     }
 
     &__item {
-        padding: 20px 0px;
+        padding: 20px 20px;
         font-size: 1.25em;
         border: 1px solid black;
         border-radius: 15px 15px 15px 15px;

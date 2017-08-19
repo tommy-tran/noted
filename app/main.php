@@ -58,6 +58,7 @@ if(!isset($_SESSION['user_id'])) {
       </div>
       <div class="notes__extra-container notes__extra-add notes--hidden">
         <div class="notes__button-container"><button class="notes__button notes__button-green notes__button-save">Save</button></div>
+        <div class="notes__title" id="title" contenteditable="true">Title</div>
         <div class="notes__button-container notes__button--pull-right"><button class="notes__button notes__button-red notes__button-cancel">Cancel</button></div>
       </div>
       <div class="notes__list">
