@@ -125,12 +125,15 @@ $("#title").keyup(function() {
 });
 
 function updateNote() {
-    var title = $("#title");
+    var title = $("#title").text();
+    if (title == "") {
+        title = "Untitled";
+    }
     var notepad = $("#notepad");
     $.ajax({
         type: 'POST',
         url: "updatenote.php",
-        data: {title:title.text(),note:notepad.val(),id: activeNote},
+        data: {title:title,note:notepad.val(),id: activeNote},
         success: function(data) {
             if (data == 'error') {
                 $('.message-content').html("<div class='message-error'><p>There was an error updating the note into the database.</p></div>");
@@ -142,7 +145,27 @@ function updateNote() {
     });
 }
 
-$("#notepad").keyup(updateNote());
-$("#title").keyup(updateNote());
+$("#notepad").keyup(function() {
+    updateNote()
+});
+$("#title").keyup(function() {
+    updateNote()
+});
 $(".notes__button-save").click(updateNote());
+
+setInterval(function() {
+    $(".notes__item").click(function() {
+        var main = $('.notes__extra-main');
+        main.addClass("notes--hidden");
+        var edit = $(".notes__extra-edit");
+        edit.addClass("notes--hidden");
+        var add = $(".notes__extra-add");
+        add.removeClass("notes--hidden");
+        var noteList = $(".notes__list");
+        noteList.addClass("notes__list--hide");
+        var activeNote = $(this).attr("id");
+        $("#notepad").val($(this).find('.notes__item-note').text());
+        $(".notes__notepad").removeClass("notes__notepad--hide");
+    });    
+}, 100);
 

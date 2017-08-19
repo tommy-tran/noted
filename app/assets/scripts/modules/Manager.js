@@ -37,13 +37,12 @@ class Manager {
         this.add.addClass("notes--hidden");
         this.notepad.addClass("notes__notepad--hide");
         this.noteList.removeClass("notes__list--hide");
-        var that = this;
+        this.notepadtext.val("");
+        this.noteTitle.text("Title");
         $.ajax({
             url: "loadnotes.php",
             success: function(data) {
                 // Clear notepad
-                that.notepadtext.val("");
-                that.noteTitle.text("Title");
                 console.log("Success: Loaded Notes!");
                 $(".notes__list").html(data);
             },

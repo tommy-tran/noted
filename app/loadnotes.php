@@ -19,12 +19,14 @@ if ($result = mysqli_query($link, $sql)) {
         while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
             $note_id = $row['id'];
             $title = $row['title'];
+            $note = $row['note'];
             $time = $row['time'];
             $time = date("F d, Y h:i:s A", $time);
             echo "
-            <div class='notes__item'>
-                <div class='notes__item-title' id='$note_id'>$title</div>
+            <div class='notes__item' id='$note_id'>
+                <div class='notes__item-title'>$title</div>
                 <div class='notes__item-date'>$time</div>
+                <div class='notes__item-note'>$note</div>
             </div>
             ";
         }

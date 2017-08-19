@@ -62,7 +62,11 @@ if(!isset($_SESSION['user_id'])) {
         <div class="notes__button-container notes__button--pull-right"><button class="notes__button notes__button-red notes__button-cancel">Cancel</button></div>
       </div>
       <div class="notes__list">
-        <div class="notes__list-item">Note</div>
+        <div class='notes__item' id='$note_id'>
+          <div class='notes__item-title'>Loading</div>
+          <div class='notes__item-date'>Loading</div>
+          <div class='notes__item-note'></div>
+        </div>
       </div>
       <div class="notes__notepad notes__notepad--hide"><textarea id="notepad" rows=18></textarea></div>
     </div>
