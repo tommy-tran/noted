@@ -11,6 +11,7 @@ class Manager {
         this.notepad = $(".notes__notepad");
         this.notepadtext = $("#notepad");
         this.noteList = $(".notes__list");
+        this.noteTitle= $(".notes__title");
         this.events();
     }
 
@@ -18,6 +19,7 @@ class Manager {
         this.mainBtn.click(this.openMain.bind(this));
         this.editBtn.click(this.openEdit.bind(this));
         this.addBtn.click(this.openAdd.bind(this));
+        this.noteTitle.focus(this.cleanTitle.bind(this));
         this.changeNotepadSize();
     }
 
@@ -36,11 +38,13 @@ class Manager {
         this.add.addClass("notes--hidden");
         this.notepad.addClass("notes__notepad--hide");
         this.noteList.removeClass("notes__list--hide");
+        var that = this;
         $.ajax({
             url: "loadnotes.php",
             success: function(data) {
                 // Clear notepad
-                $("#notepad").val("");
+                that.notepadtext.val("");
+                that.noteTitle.text("Title");
                 console.log("Success: Loaded Notes!");
                 $(".notes__list").html(data);
             },
@@ -62,6 +66,12 @@ class Manager {
         this.add.removeClass("notes--hidden");
         this.notepad.removeClass("notes__notepad--hide");
         this.noteList.addClass("notes__list--hide");
+    }
+
+    cleanTitle() {
+        if (this.noteTitle.text() == "Title") {
+            this.noteTitle.text("");
+        }
     }
     
 }

@@ -124,7 +124,7 @@ $("#title").keyup(function() {
     });
 });
 
-$("#notepad").keyup(function() {
+function updateNote() {
     var title = $("#title");
     var notepad = $("#notepad");
     $.ajax({
@@ -140,27 +140,9 @@ $("#notepad").keyup(function() {
             $('.message-content').html("<div class='message-error'><p>" + data + "</p></div>");
         }
     });
-});
+}
 
-$("#notepad").keyup(function() {
-    var title = $("#title");
-    var notepad = $("#notepad");
-    $.ajax({
-        type: 'POST',
-        url: "updatenote.php",
-        data: {title:title.text(),note:notepad.val(),id: activeNote},
-        success: function(data) {
-            if (data == 'error') {
-                $('.message-content').html("<div class='message-error'><p>There was an error updating the note into the database.</p></div>");
-            }
-        },
-        error: function(data) {
-            $('.message-content').html("<div class='message-error'><p>" + data + "</p></div>");
-        }
-    });
-});
-
-$(".notes__button-save").click(function() {
-    
-});
+$("#notepad").keyup(updateNote());
+$("#title").keyup(updateNote());
+$(".notes__button-save").click(updateNote());
 
