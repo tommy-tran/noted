@@ -29,7 +29,6 @@ class Manager {
         } else {
             this.notepadtext.attr("rows", 18);
         }
-
     }
 
     openMain() {

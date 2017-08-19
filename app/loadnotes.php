@@ -4,7 +4,7 @@ include('connection.php');
 // Get user_id
 $user_id = $_SESSION['user_id'];
 // Delete empty notes
-$sql = "DELETE FROM notes WHERE note=''";
+$sql = "DELETE FROM notes WHERE note='' AND (title='' OR title='Title')";
 $result = mysqli_query($link, $sql);
 
 if (!$result) {
