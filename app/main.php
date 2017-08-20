@@ -30,7 +30,7 @@ if(!isset($_SESSION['user_id'])) {
               <a href="#"><li class="header-link">Contact</li></a>
               <li class="header-logout header-link logout-btn"><a href="index.php?logout=1">Logout</a></li>
             </ul>
-            <div class="header-userinfo">Logged in as <b><?php echo $_SESSION['username']?></b></div>
+            <div class="header-userinfo">Logged in as <strong><?php echo $_SESSION['username']?></strong></div>
           </nav>
         </div>
 
@@ -49,12 +49,8 @@ if(!isset($_SESSION['user_id'])) {
     
     <div class="notes">
       <div class="notes__extra-container notes__extra-main">
-        <div class="notes__button-container"><button id="addnote" class="notes__button notes__button-blue notes__button-add">Add Note</button></div>
-        <div class="notes__button-container notes__button--pull-right"><button class="notes__button notes__button-red notes__button-edit">Edit</button></div>
-      </div>
-      <div class="notes__extra-container notes__extra-edit notes--hidden">
-        <div class="notes__button-container"><button class="notes__button notes__button-blue notes__button-add">Add Note</button></div>
-        <div class="notes__button-container notes__button--pull-right"><button class="notes__button notes__button-green notes__button-done">Done</button></div>
+        <h2 class="notes__extra-header">Your Notes</h2>
+        <div class="notes__button-container notes__button--pull-right"><button id="addnote" class="notes__button notes__button-blue notes__button-add">Add Note</button></div>
       </div>
       <div class="notes__extra-container notes__extra-add notes--hidden">
         <div class="notes__button-container"><button class="notes__button notes__button-green notes__button-save">Save</button></div>

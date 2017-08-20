@@ -4,8 +4,6 @@ class Manager {
     constructor() {
         this.main = $(".notes__extra-main");
         this.mainBtn = $(".notes__button-cancel, .notes__button-done, .notes__button-save");
-        this.edit = $(".notes__extra-edit");
-        this.editBtn = $(".notes__button-edit");
         this.add = $(".notes__extra-add");
         this.addBtn = $(".notes__button-add");
         this.notepad = $(".notes__notepad");
@@ -17,7 +15,6 @@ class Manager {
 
     events() {
         this.mainBtn.click(this.openMain.bind(this));
-        this.editBtn.click(this.openEdit.bind(this));
         this.addBtn.click(this.openAdd.bind(this));
         this.noteTitle.focus(this.cleanTitle.bind(this));
         this.changeNotepadSize();
@@ -31,9 +28,10 @@ class Manager {
         }
     }
 
+
+
     openMain() {
         this.main.removeClass("notes--hidden");
-        this.edit.addClass("notes--hidden");
         this.add.addClass("notes--hidden");
         this.notepad.addClass("notes__notepad--hide");
         this.noteList.removeClass("notes__list--hide");
@@ -52,15 +50,8 @@ class Manager {
         });
     }
 
-    openEdit() {
-        this.main.addClass("notes--hidden");
-        this.edit.removeClass("notes--hidden");
-        this.add.addClass("notes--hidden");
-    }
-
     openAdd() {
         this.main.addClass("notes--hidden");
-        this.edit.addClass("notes--hidden");
         this.add.removeClass("notes--hidden");
         this.notepad.removeClass("notes__notepad--hide");
         this.noteList.addClass("notes__list--hide");
