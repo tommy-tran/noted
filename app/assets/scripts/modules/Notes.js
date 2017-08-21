@@ -4,12 +4,15 @@ $(document).ready(function(){
         success: function(data) {
             console.log("Success: Loaded Notes!");
             $(".notes__list").html(data);
-            clickNote();
+            clickNotes();
+            deleteNotes();
         },
         error: function(data) {
             console.log(data);
         }
     });
+
+});
 
     $("#notepad").keydown(function(e) {
         if(e.keyCode === 9) { // tab was pressed
@@ -34,7 +37,7 @@ $(document).ready(function(){
     });
 
     // Open individual notes
-    function clickNote() {
+    function clickNotes() {
         $(".notes__item").click(function() {
             var main = $('.notes__extra-main');
             main.addClass("notes--hidden");
@@ -49,6 +52,33 @@ $(document).ready(function(){
             $(".notes__notepad").removeClass("notes__notepad--hide");
         });    
     }
-});
+
+    function deleteNotes() {
+        $(".notes__item-close").click(function(e) {
+            e.stopPropagation();
+            // Get note
+            var note = $(this).parent();
+            // Get note item's id
+            var id = note.attr('id');
+            // Call to deletenotes
+            $.ajax({
+                url: "deletenote.php",
+                type: "POST",
+                data: {id:id},
+                success: function(data) {
+                    if (data =='error') {
+                        console.log('Error deleting note: ' + id);
+                    } else {
+                        console.log("Success: Deleted Note: " + id);
+                        note.remove();
+                    }
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            
+            });
+        }
+    )};
 
 
