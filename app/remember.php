@@ -53,12 +53,13 @@ if (!empty($_COOKIE['rememberme'])){
 
         $f2authentificator2 = reverser($authentificator2);
         $user_id = $_SESSION['user_id'];
+        $username = $_SESSION['username'];
         $expires = date('Y-m-d H:i:s', time() + 1296000);
         
         $sql = "INSERT INTO rememberme 
-        (`authentificator1`, `f2authentificator2`, `user_id`, `expires`)
+        (`authentificator1`, `f2authentificator2`, `user_id`, `username`, `expires`)
         VALUES 
-        ('$authentificator1', '$f2authentificator2', '$user_id', '$expires')";
+        ('$authentificator1', '$f2authentificator2', '$user_id', '$username', '$expires')";
         
         $result = mysqli_query($link, $sql);
 
