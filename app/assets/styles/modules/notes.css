@@ -9,15 +9,20 @@
     margin: auto auto;
     background-color: rgba(255, 255, 255, 0.85);
     overflow-y: hidden;
-    border-radius: 20px;
     
-    @mixin Medium {
+    
+    @mixin Large {
         padding: 30px 40px;
         top: 0;
         height: 680px;
-        width: 960px;
+        width: 720;
         border-radius: 36px;
         border: solid 2px black;
+        border-radius: 20px;
+    }
+
+    @mixin XLarge {
+        width: 960px;
     }
     
     &--hidden {
@@ -30,11 +35,15 @@
         outline: 0;
         font-size: 26px;
         color: black;
-        width: 144px;
+        width: 100px;
         height: 100px;
         @mixin Medium {
+            width: 140px;
+        }
+
+        @mixin Large {
             width: 180px;
-            height: 80px;    
+            height: 120px
         }
 
         &-green {
@@ -120,14 +129,16 @@
     
     &__extra-header {
         font-size: 2.5em;
-        margin-top: 15px;
-        margin-left: 10px;
-        margin-bottom: 0;
+        margin: 18px 5px;
         font-family: 'Lato';
+
+        @mixin Large {
+            margin: 15px 10px;
+        }
     }
 
     &__notepad {
-        @mixin Medium {
+        @mixin Large {
             margin-top: 24px;
             margin-bottom: 20px;
         }
@@ -162,7 +173,7 @@
             display: flex;
             padding: 20px 20px;
 
-            @mixin Medium {
+            @mixin Large {
                 padding: 0 0;
             }
         }
@@ -174,7 +185,7 @@
         overflow-y: scroll;
         height: 572px;
 
-        @mixin Medium {
+        @mixin Large {
             margin-top: 24px;
             margin-bottom: 20px;
         }
@@ -216,7 +227,7 @@
             right: 25px;
             font-size: 1.5em;
             color: red;
-            z-index: 20;
+            z-index: 8;
             &:hover {
                 color: black;
             }

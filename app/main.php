@@ -25,8 +25,7 @@ if(!isset($_SESSION['user_id'])) {
           <nav class="primary-nav">
             <ul>
             <!--Links-->
-              <a href="#"><li class="header-link">Profile</li></a>
-              <a href="#"><li class="header-link">Help</li></a>
+              <li class="header-link">About</li>
               <a href="#"><li class="header-link">Contact</li></a>
               <li class="header-logout header-link logout-btn"><a href="index.php?logout=1">Logout</a></li>
             </ul>
@@ -66,11 +65,6 @@ if(!isset($_SESSION['user_id'])) {
       </div>
       <div class="notes__notepad notes__notepad--hide"><textarea id="notepad" rows=18></textarea></div>
     </div>
-
-    <div class="footer">
-      <p>Created by Tommy Tran</p>
-    </div>
-
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

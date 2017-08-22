@@ -25,8 +25,7 @@ include('remember.php');
           <nav class="primary-nav">
             <ul>
             <!--Links-->
-              <a href="#"><li class="header-link">Home</li></a>
-              <a href="#"><li class="header-link">Help</li></a>
+              <li class="header-link">About</li>
               <a href="#"><li class="header-link">Contact</li></a>
               <li class="header-login header-link login-btn">Login</li>
             <!--Icon-->
@@ -95,10 +94,6 @@ include('remember.php');
       <h1>Noted</h1>
       <p>Free, safe and easy to use online notes!</p>
       <button class="signup-btn">Sign up for free!</button>
-    </div>
-
-    <div class="footer">
-      <p>Created by Tommy Tran</p>
     </div>
 
     <script src="/temp/scripts/App.js"></script>

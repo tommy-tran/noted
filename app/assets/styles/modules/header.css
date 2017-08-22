@@ -31,6 +31,10 @@
         margin: 0 0;
         font-size: 1.3em;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         a {
             color: black;
         }
@@ -76,11 +80,12 @@
                 li {
                     border-bottom: 1px solid;
                     background-color: white;
-                    height: 4.88em;
+                    height: 6.5em;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     text-align: center;
+                    
 
                     &.hovered {
                         background-color: #f2f2f2;
