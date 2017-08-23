@@ -63,7 +63,7 @@ if(!isset($_SESSION['user_id'])) {
           <div class='notes__item-note'></div>
         </div>
       </div>
-      <div class="notes__notepad notes__notepad--hide"><textarea id="notepad" rows=18></textarea></div>
+      <div class="notes__notepad notes__notepad--hide"><textarea id="notepad" rows=14></textarea></div>
     </div>
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
