@@ -25,8 +25,8 @@ include('remember.php');
           <nav class="primary-nav">
             <ul>
             <!--Links-->
-              <li class="header-link">About</li>
-              <a href="#"><li class="header-link">Contact</li></a>
+            <a href="http://tommytran.xyz"><li class="header-link">About</li></a>
+            <a href="http://tommytran.xyz"><li class="header-link">Contact</li></a>
               <li class="header-login header-link login-btn">Login</li>
             <!--Icon-->
             </ul>
