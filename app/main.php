@@ -25,8 +25,8 @@ if(!isset($_SESSION['user_id'])) {
           <nav class="primary-nav">
             <ul>
             <!--Links-->
-              <li class="header-link">About</li>
-              <a href="#"><li class="header-link">Contact</li></a>
+              <a href="http://tommytran.xyz"><li class="header-link">About</li></a>
+              <a href="http://tommytran.xyz"><li class="header-link">Contact</li></a>
               <li class="header-logout header-link logout-btn"><a href="index.php?logout=1">Logout</a></li>
             </ul>
             <div class="header-userinfo">Logged in as <strong><?php echo $_SESSION['username']?></strong></div>
